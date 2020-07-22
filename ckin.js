@@ -294,11 +294,11 @@ function wrapPlayers() {
 
 function buildControls(skin) {
     var html = [];
-    html.push('<button class="' + skin + '__button--big toggle" title="Toggle Play">' + iconPlay + '</button>');
+    html.push('<button class="' + skin + '__button--big toggle" title="Kích Để Nghe">' + iconPlay + '</button>');
 
     html.push('<div class="' + skin + '__controls ckin__controls">');
 
-    html.push('<button class="' + skin + '__button toggle" title="Toggle Video">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '</div>', '<button class="' + skin + '__button volume" title="Volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
+    html.push('<button class="' + skin + '__button toggle" title="Kích Để Nghe">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '</div>', '<button class="' + skin + '__button volume" title="Volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
 
     html.push('</div>');
 
