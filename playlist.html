@@ -4,6 +4,7 @@
 
 
 
+
 <link rel="stylesheet" media="screen" href="https://kinhlangnghiem.github.io/nammoadidaphat/fullpage.css" />
 
 <meta name="apple-mobile-web-app-title" content="CodePen">
@@ -39,7 +40,7 @@ body
 {
     font-family: Helvetica, Arial;
     margin: 0;
-    background-color: #ffeff5;
+    background-color: #e6e6e6;
 }
 
 #app-cover
@@ -60,7 +61,7 @@ body
     right: -30px;
     bottom: -30px;
     left: -30px;
-    background-image: url(&quot;https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg&quot;);
+    background-image: url(&quot;https://kinhlangnghiem.github.io/kinhlangnghiem/hinh-nen.jpg&quot;);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -95,7 +96,7 @@ body
     right: 15px;
     left: 15px;
     padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
+    background-color: #d9d9d9;
     border-radius: 15px 15px 0 0;
     -webkit-transition: 0.3s ease top;
     transition: 0.3s ease top;
@@ -469,13 +470,12 @@ body
         </div>
     </div>
     <script src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/stopExecutionOnTimeout.js&quot;></script>
-
   <script src='https://kinhlangnghiem.github.io/nammoadidaphat/jquery.min.js'></script>
   
       <script id=&quot;rendered-js&quot; >
 $(function ()
 {
-  var playerTrack = $(&quot;#player-track&quot;),bgArtwork = $('#bg-artwork'),bgArtworkUrl,albumName = $('#album-name'),trackName = $('#track-name'),albumArt = $('#album-art'),sArea = $('#s-area'),seekBar = $('#seek-bar'),trackTime = $('#track-time'),insTime = $('#ins-time'),sHover = $('#s-hover'),playPauseButton = $(&quot;#play-pause-button&quot;),i = playPauseButton.find('i'),tProgress = $('#current-time'),tTime = $('#track-length'),seekT,seekLoc,seekBarPos,cM,ctMinutes,ctSeconds,curMinutes,curSeconds,durMinutes,durSeconds,playProgress,bTime,nTime = 0,buffInterval = null,tFlag = false,albums = ['Dawn', 'Me &amp; You', 'Electro Boy', 'Home', 'Proxy (Original Mix)'],trackNames = ['Skylike - Dawn', 'Alex Skrindo - Me &amp; You', 'Kaaze - Electro Boy', 'Jordan Schor - Home', 'Martin Garrix - Proxy'],albumArtworks = ['_1', '_2', '_3', '_4', '_5'],trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3'],playPreviousTrackButton = $('#play-previous'),playNextTrackButton = $('#play-next'),currIndex = -1;
+  var playerTrack = $(&quot;#player-track&quot;),bgArtwork = $('#bg-artwork'),bgArtworkUrl,albumName = $('#album-name'),trackName = $('#track-name'),albumArt = $('#album-art'),sArea = $('#s-area'),seekBar = $('#seek-bar'),trackTime = $('#track-time'),insTime = $('#ins-time'),sHover = $('#s-hover'),playPauseButton = $(&quot;#play-pause-button&quot;),i = playPauseButton.find('i'),tProgress = $('#current-time'),tTime = $('#track-length'),seekT,seekLoc,seekBarPos,cM,ctMinutes,ctSeconds,curMinutes,curSeconds,durMinutes,durSeconds,playProgress,bTime,nTime = 0,buffInterval = null,tFlag = false,albums = ['Giảng Dạy Về Luật Nhân Qủa', 'Khai Thị Quyển 1', 'Khai Thị Quyển 4', 'Khuyên Tu Tịnh Độ Thiết yếu', 'Niệm Phật Thoát Sinh Tử', 'Pháp Ngữ Quyển 1', ' Pháp Ngữ Quyển 02', 'Kinh Pháp Hoa'],trackNames = ['Hòa Thượng Quảng Khâm', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Thích Minh Thành', 'Dịch Thích Nữ Tuệ Uyển', 'Hòa Thượng Hư Vân', 'Hòa Thượng Hư Vân', 'Hòa Thượng Thích Trí Tịnh'],albumArtworks = ['_1', '_2', '_3', '_4', '_5', '_6', '_7', '_8'],trackUrl = ['https://stream7.mixcloud.com/secure/c/m4a/64/d/5/9/c/3079-9e0e-4ac8-a85c-026197b2e0ac.m4a?sig=B4togVyMW1rsLeaM5VDrAA', 'https://dl.dropboxusercontent.com/s/u96g5dcs1soq5ro/Khaithi01.mp3', 'https://dl.dropboxusercontent.com/s/o8pcll4wtnw0ec8/Khai-Thi-Quyen-04-Hoa-Thuong-Tuyen-Hoa.mp3', 'https://stream14.mixcloud.com/secure/c/m4a/64/e/a/b/e/dd28-880d-4843-b87e-a54a267fb247.m4a?sig=bv7dN3v0AgDtRNyW8s3DGg', 'https://stream12.mixcloud.com/secure/c/m4a/64/9/7/3/c/eb3c-6f2b-4308-bc91-0c0f014bf2a9.m4a?sig=HAJSgZsFR6E-GWaqN9jufA', 'https://dl.dropboxusercontent.com/s/no03ncm9jr3p1ux/Phap-Ngu-Thien-Su-Hu-Van-P1.mp3', 'https://dl.dropboxusercontent.com/s/a1cb5ot2q0lupt4/Phap-Ngu-Thien-Su-Hu-Van-P2.mp3', 'https://dl.dropboxusercontent.com/s/trjzebv94neizs8/Kinh-Dieu-Phap-Lien-Hoa-Thich-Tri-Tinh.mp3'],playPreviousTrackButton = $('#play-previous'),playNextTrackButton = $('#play-next'),currIndex = -1;
 
   function playPause()
   {
