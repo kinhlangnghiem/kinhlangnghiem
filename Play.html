@@ -288,53 +288,53 @@ jQuery(function ($) {
     // initialize playlist and controls
     var index = 0,
     playing = false,
-    mediaPath = 'https://stream14.mixcloud.com/',
+    mediaPath = '',
     extension = '',
     tracks = [{
       "track": 1,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 1 ) ",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/5/d/8/8/13a8-684e-4991-9e01-d606c319851f.m4a?sig=HMJqpEI_emB_UO3d0PlVBw" },
+      "file": "https://www.googleapis.com/drive/v3/files/19CYC8LsRaBD6gmSzKwaGROs25Jp8k41b?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 2,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 2 )",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/5/5/c/3/2cfb-77f2-4bf6-8893-a5ba5c5ca632.m4a?sig=o0GcArx1sg-Cuyj4ZFr-8g" },
+      "file": "https://www.googleapis.com/drive/v3/files/1tOLqVnxZn8Lu9TG-_36iwoRZW2EVRzU5?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 3,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 3 )",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/0/2/d/2/0ee2-0b4f-4c89-9554-cf324c4f1968.m4a?sig=BfL_fXUNHwCtA1Lo7yfiwA" },
+      "file": "https://www.googleapis.com/drive/v3/files/1WlDs61xh16TmjSys_XIbVHhNB6Zb__5C?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 4,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 4 )",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/7/f/0/b/a9b5-bf31-4af8-975b-d07ad10463b2.m4a?sig=m8tQXMMkW6xRxoNuYjBmlQ" },
+      "file": "https://www.googleapis.com/drive/v3/files/1_mmkQFixjO8Y1qeZCIehbN3dH9kK877R?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 5,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 5 )",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/f/c/a/e/cb3d-6f45-40c9-867d-761d71b72a1f.m4a?sig=wmXPoTu0KRJ7dkN6FuLTKg" },
+      "file": "https://www.googleapis.com/drive/v3/files/1xDp-N6FC8uYaf2ClPKr0tAaA03pO5B8c?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 6,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 6 ) ",
       "duration": "10:50:59",
-      "file": "secure/c/m4a/64/7/7/a/0/f767-6774-4616-b192-08d68d839182.m4a?sig=7Shxg8yNpXvkXMsf3Poq2g" },
+      "file": "https://www.googleapis.com/drive/v3/files/1EIL0FqFDEnhhIsdeb0J_z-MK9jQlnN0G?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {
       "track": 7,
       "name": "Kinh Thủ Lăng Nghiêm Giảng Giải ( Tập 7 )",
       "duration": "10:44:10",
-      "file": "secure/c/m4a/64/6/8/4/5/f3a8-e426-4191-97b4-7ae55bfbcfdd.m4a?sig=FJxco5JtANej9dQQ2obp0Q" },
+      "file": "https://www.googleapis.com/drive/v3/files/1DqLCwVYTh4UfICUE3cIsrlvqL_gyb9of?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" },
     {        
       "track": 8,
-      "name": "KINH LĂNG NGHIÊM DIỄN ĐỌC - LÊ ĐÌNH THÁM",
-      "duration": "09:42:53",
-      "file": "secure/c/originals/c/c/b/6/db5f-628e-4fce-987b-61fdae77fb58.mp3?sig=EJ3SBoPHaFLU8O9mKIH6WQ" },
+      "name": "KINH LĂNG NGHIÊM DIỄN ĐỌC -THÍCH DUY LỰC",
+      "duration": "08:31:35",
+      "file": "https://www.googleapis.com/drive/v3/files/1oDOz0I0K1dsppdu7d4St3V3PDY7Gyu8X?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
     {         
       "track": 9,
-      "name": "KINH THỦ LĂNG NGHIÊM - THÍCH DUY LỰC",
-      "duration": "08:31:35",
-      "file": "secure/c/originals/c/1/2/2/6625-7b02-40d0-a3b2-cba9539dcd6b.mp3?sig=C9-doVKWEh1xsAAwQh3ujQ" }],
+      "name": "KINH THỦ LĂNG NGHIÊM - LÊ ĐÌNH THÁM",
+      "duration": "09:42:53",
+      "file": "https://www.googleapis.com/drive/v3/files/1Bi4jAWcAlp0NI0xFFq1oCpVquA3azokk?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y" }],
 
     buildPlaylist = $.each(tracks, function (key, value) {
       var trackNumber = value.track,
