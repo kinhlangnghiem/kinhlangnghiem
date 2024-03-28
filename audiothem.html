@@ -1,0 +1,777 @@
+
+
+<!-- Start: injected by Adguard -->
+
+<!-- Start: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63732321231232&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="e5f709c877c946dd8a7e499177ba9fc0" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63732229749762&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="e5f709c877c946dd8a7e499177ba9fc0" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63732231547093&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="e5f709c877c946dd8a7e499177ba9fc0" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63732229749762&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="e5f709c877c946dd8a7e499177ba9fc0" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<link rel="stylesheet" media="screen" href="https://kinhlangnghiem.github.io/nammoadidaphat/fullpage.css" />
+
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body class="">
+<div class="referer-warning">
+</div>
+<div id="result-iframe-wrap" role="main">
+<iframe id="result" srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+
+  
+  
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+  
+<style>
+*:focus
+{
+    outline: none;
+}
+
+body
+{
+    font-family: Helvetica, Arial;
+    margin: 0;
+    background-color: #1a75ff;
+}
+
+#app-cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 430px;
+    height: 100px;
+    margin: -4px auto;
+}
+
+#bg-artwork
+{
+    position: fixed;
+    top: -30px;
+    right: -30px;
+    bottom: -30px;
+    left: -30px;
+    background-image: url(&quot;https://1.bp.blogspot.com/-OX6CVsUY1XY/XuSp9bZGI0I/AAAAAAAAAbc/MhrhYvNj29QrCinU47rMqOqx4PabT2IpwCLcBGAsYHQ/s1600/AE3B0AA0-A72F-408D-9FC4-C11C11FC4EFC.jpeg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    z-index: 1;
+}
+
+#bg-layer
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    opacity: 0.51;
+    z-index: 2;
+}
+
+#player
+{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+
+#player-track
+{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    left: 15px;
+    padding: 13px 22px 10px 184px;
+    background-color:  #ffffff;
+    border-radius: 15px 15px 0 0;
+    -webkit-transition: 0.3s ease top;
+    transition: 0.3s ease top;
+    z-index: 1;
+}
+
+#player-track.active
+{
+    top: -92px;
+}
+
+#album-name
+{
+    color:  #800000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#track-name
+{
+    color: #1a0000;
+    font-size: 13px;
+    margin: 2px 0 13px 0;
+}
+
+#track-time
+{
+    height: 12px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+
+#current-time
+{
+    float: left;
+}
+
+#track-length
+{
+    float: right;
+}
+
+#current-time, #track-length
+{
+    color: transparent;
+    font-size: 11px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+
+#track-time.active #current-time, #track-time.active #track-length
+{
+    color: #61051d;
+    background-color: transparent;
+}
+
+#s-area, #seek-bar
+{
+    position: relative;
+    height: 4px;
+    border-radius: 4px;
+}
+
+#s-area
+{
+    background-color: #ff9999;
+    cursor: pointer;
+}
+
+#ins-time
+{
+    position: absolute;
+    top: -29px;
+    color: #ffc34d;
+    font-size: 12px;
+    white-space: pre;
+    padding: 5px 6px;
+    border-radius: 4px;
+	display:none;
+}
+
+#s-hover
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+#ins-time, #s-hover
+{
+    background-color: #0066ff;
+}
+
+#seek-bar
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #4b0115;
+    -webkit-transition: 0.2s ease width;
+    transition: 0.2s ease width;
+    z-index: 1;
+}
+
+#player-content
+{
+    position: relative;
+    height: 100%;
+    background-color:  #003300;
+    box-shadow: 0 30px 80px #fff;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#album-art
+{
+    position: absolute;
+    top: -40px;
+    width: 115px;
+    height: 115px;
+    margin-left: 40px;
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+    box-shadow: 0 0 0 10px #f2f2f2;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#album-art.active
+{
+    top: -60px;
+    box-shadow: 0 0 0 4px #f2f2f2, 0 30px 50px -15px #afb7c1;
+}
+
+#album-art:before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: -10px auto 0 auto;
+    background-color: #eff2f6;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #f2f2f2;
+    z-index: 2;
+}
+
+#album-art img
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+
+#album-art img.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+#album-art.active img.active
+{
+    z-index: 1;
+    -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
+            animation: rotateAlbumArt 3s linear 0s infinite forwards;
+}
+
+@-webkit-keyframes rotateAlbumArt
+{
+    0%{ -webkit-transform: rotateZ(0); transform: rotateZ(0); }
+    100%{ -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
+}
+
+@keyframes rotateAlbumArt
+{
+    0%{ -webkit-transform: rotateZ(0); transform: rotateZ(0); }
+    100%{ -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
+}
+
+#buffer-box
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 13px;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px;
+    margin: -12px auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.19);
+    opacity: 0;
+    z-index: 2;
+}
+
+#album-art img, #buffer-box
+{
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+}
+
+#album-art.buffering img
+{
+    opacity: 0.25;
+}
+
+#album-art.buffering img.active
+{
+    opacity: 0.8;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+#album-art.buffering #buffer-box
+{
+    opacity: 1;
+}
+
+#player-controls
+{
+    width: 250px;
+    height: 100%;
+    margin: 0 5px 0 141px;
+    float: right;
+    overflow: hidden;
+}
+
+.control
+{
+    width: 33.333%;
+    float: left;
+    padding: 12px 0;
+}
+
+.button
+{
+    width: 26px;
+    height: 26px;
+    padding: 25px;
+    background-color: #005ce6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button i
+{
+    display: block;
+    color: #f2f2f2;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1;
+}
+
+.button, .button i
+{
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+.button:hover
+{
+    background-color: #d6d6de;
+}
+
+.button:hover i
+{
+    color: #e60000;
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #e60000;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
+  z-index: 125;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
+
+    <div id=&quot;app-cover&quot;>
+        <div id=&quot;bg-artwork&quot;></div>
+        <div id=&quot;bg-layer&quot;></div>
+        <div id=&quot;player&quot;>
+            <div id=&quot;player-track&quot;>
+                <div id=&quot;album-name&quot;></div>
+                <div id=&quot;track-name&quot;></div>
+                <div id=&quot;track-time&quot;>
+                    <div id=&quot;current-time&quot;></div>
+                    <div id=&quot;track-length&quot;></div>
+                </div>
+                <div id=&quot;s-area&quot;>
+                    <div id=&quot;ins-time&quot;></div>
+                    <div id=&quot;s-hover&quot;></div>
+                    <div id=&quot;seek-bar&quot;></div>
+                </div>
+            </div>
+            <div id=&quot;player-content&quot;>
+                <div id=&quot;album-art&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/kinhlangnghiem/cd-player.gif&quot; class=&quot;active&quot; id=&quot;_1&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/01.gif&quot; id=&quot;_2&quot;>
+                    <img src=&quot;https://i.giphy.com/media/3ohze3CdQIefOuP5BK/200w.webp&quot; id=&quot;_3&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/04.gif&quot; id=&quot;_4&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/03.gif&quot; id=&quot;_5&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/05.gif&quot; id=&quot;_6&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_7&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/7a/fa/31/7afa3142940317f1020b842269af0656.gif&quot; id=&quot;_8&quot;>
+                    <img src=&quot;https://media2.giphy.com/media/3o7btSYj681HchjLxe/giphy.gif?cid=790b7611755462563add2a486931bbbb89a34f8c6716be78&rid=giphy.gif&ct=g&quot; class=&quot;active&quot; id=&quot;_9&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/7a/fa/31/7afa3142940317f1020b842269af0656.gif&quot; id=&quot;_10&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/32/e9/69/32e9698514d21b62c65d050a7600df60.gif&quot; id=&quot;_11&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/07/bd/d1/07bdd178f0b23f50019e1c9f2555a3c4.gif&quot; id=&quot;_12&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_13&quot;>
+                    <img src=&quot;https://i2.wp.com/38.media.tumblr.com/f11689dd25383a684d98de53f51635ab/tumblr_nn4r7my6ut1txeruoo1_500.gif&quot; id=&quot;_14&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/33/1b/72/331b720c37c2475128be9c2a3890e5f4.gif&quot; id=&quot;_15&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/4e/19/b6/4e19b63520aa171f48279a3072fe4bdf.gif&quot; id=&quot;_16&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/7a/fa/31/7afa3142940317f1020b842269af0656.gif&quot; id=&quot;_17&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/32/e9/69/32e9698514d21b62c65d050a7600df60.gif&quot; id=&quot;_18&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/07/bd/d1/07bdd178f0b23f50019e1c9f2555a3c4.gif&quot; id=&quot;_19&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_20&quot;>
+                    <img src=&quot;https://i.giphy.com/media/3ohze3CdQIefOuP5BK/200w.webp&quot; id=&quot;_21&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/04.gif&quot; id=&quot;_22&quot;>
+                    <img src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/03.gif&quot; id=&quot;_23&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/7a/fa/31/7afa3142940317f1020b842269af0656.gif&quot; id=&quot;_24&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/32/e9/69/32e9698514d21b62c65d050a7600df60.gif&quot; id=&quot;_25&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/07/bd/d1/07bdd178f0b23f50019e1c9f2555a3c4.gif&quot; id=&quot;_26&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_27&quot;>
+		            <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_28&quot;>	    
+			        <img src=&quot;https://i.pinimg.com/originals/4e/19/b6/4e19b63520aa171f48279a3072fe4bdf.gif&quot; id=&quot;_29&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/7a/fa/31/7afa3142940317f1020b842269af0656.gif&quot; id=&quot;_30&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/32/e9/69/32e9698514d21b62c65d050a7600df60.gif&quot; id=&quot;_31&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/07/bd/d1/07bdd178f0b23f50019e1c9f2555a3c4.gif&quot; id=&quot;_32&quot;>
+                    <img src=&quot;https://i.pinimg.com/originals/8c/c6/75/8cc675b98f88e0ba10cc8fbc9071dbcd.gif&quot; id=&quot;_33&quot;>
+                            
+                    <div id=&quot;buffer-box&quot;>Đang Tải Về ...</div>
+                </div>
+                <div id=&quot;player-controls&quot;>
+                    <div class=&quot;control&quot;>
+                        <div class=&quot;button&quot; id=&quot;play-previous&quot;>
+                            <i class=&quot;fas fa-backward&quot;></i>
+                        </div>
+                    </div>
+                    <div class=&quot;control&quot;>
+                        <div class=&quot;button&quot; id=&quot;play-pause-button&quot;>
+                            <i class=&quot;fas fa-play&quot;></i>
+                        </div>
+                    </div>
+                    <div class=&quot;control&quot;>
+                        <div class=&quot;button&quot; id=&quot;play-next&quot;>
+                            <i class=&quot;fas fa-forward&quot;></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=&quot;https://kinhlangnghiem.github.io/nammoadidaphat/stopExecutionOnTimeout.js&quot;></script>
+  <script src='https://kinhlangnghiem.github.io/nammoadidaphat/jquery.min.js'></script>
+  
+      <script id=&quot;rendered-js&quot; >
+$(function ()
+{
+  var playerTrack = $(&quot;#player-track&quot;),bgArtwork = $('#bg-artwork'),bgArtworkUrl,albumName = $('#album-name'),trackName = $('#track-name'),albumArt = $('#album-art'),sArea = $('#s-area'),seekBar = $('#seek-bar'),trackTime = $('#track-time'),insTime = $('#ins-time'),sHover = $('#s-hover'),playPauseButton = $(&quot;#play-pause-button&quot;),i = playPauseButton.find('i'),tProgress = $('#current-time'),tTime = $('#track-length'),seekT,seekLoc,seekBarPos,cM,ctMinutes,ctSeconds,curMinutes,curSeconds,durMinutes,durSeconds,playProgress,bTime,nTime = 0,buffInterval = null,tFlag = false,albums = ['Bát Chánh Đạo & Tứ Diệu Đế ', 'Hòa Thượng Tuyên Hóa Pháp Ngữ ', 'Pháp Ngữ Thiền Sư Hư Vân Tập 1', 'Pháp Ngữ Thiền Sư Hư Vân Tập 2', 'Hòa Thượng Tịnh Không Khai Thị', 'Dạy Về Nhân Quả', 'Khai Thị Giới Dâm', 'Kinh Pháp Hoa', 'Niệm Phật Sám Pháp', 'Niệm Phật Thập Yếu', 'Khuyên Tu Tịnh Độ Thiết yếu', 'Kinh Thủ Lăng Nghiêm', 'Kinh Vô Lượng Thọ', 'Kinh Kim Cang', ' Kinh Quán Vô Lượng Thọ', 'Giảng Kinh A Di Đà', 'Giảng Kinh Lăng Nghiêm Quyển 1', 'Giảng Kinh Lăng Nghiêm Quyển 2', 'Giảng Kinh Lăng Nghiêm Quyển 3', 'Giảng Kinh Lăng Nghiêm Quyển 4', 'Giảng Kinh Lăng Nghiêm Quyển 5', 'Giảng Kinh Lăng Nghiêm Quyển 6', 'Giảng Kinh Lăng Nghiêm Quyển 7', 'Giảng Kinh Chú Nghiêm Quyển 1', 'Giảng Kinh Chú Nghiêm Quyển 2', 'Giảng Chú Lăng Nghiêm Quyển 3', 'Giảng Chú Lăng Nghiêm Quyển 4', 'THỌ KHANG BẢO GIÁM', 'Lá Thư Tịnh Độ 01', 'Lá Thư Tịnh Độ 02', 'Ấn Quang Đại Sư Gia Ngôn Luật Phần 1', 'Ấn Quang Đại Sư Gia Ngôn Luật Phần 2', 'Ấn Quang Văn Sao', 'Ấn Quang Gia Ngôn Lục Lời Vàng'],trackNames = ['Nguồn : bothiphap.blogspot.com', 'Thiền Sư Hư Vân', 'Thiền Sư Hư Vân', 'Thích Minh Thành', 'Tịnh Không Pháp Ngữ', 'Hòa Thượng Quảng Khâm', 'Ấn Quang Đại Sư', 'Hòa Thượng Thích Trí Tịnh', 'Hòa Thượng Thiền Tâm', 'Hòa Thượng Thiền Tâm', 'Thích Minh Thành', 'Lê Đình Thám', 'Hòa Thượng Thích Đức Niệm Dịch', 'Hòa Thượng Thích Thiện Hoa', 'Hòa Thượng Thích Thiền Tâm', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Hòa Thượng Tuyên Hóa', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư', 'Ấn Quang Đại Sư'],albumArtworks = ['_1', '_2', '_3', '_4', '_5', '_6', '_7', '_8', '_9', '_10', '_11', '_12', '_13', '_14', '_15', '_16', '_17', '_18', '_19', '_20', '_21', '_22', '_23', '_24', '_25', '_26', '_27', '_28', '_29', '_30', '_31', '_32', '_33'],trackUrl = ['https://ia600201.us.archive.org/35/items/Bat_Chanh_Dao-Tu-Dieu-De/B%C3%81T%20CH%C3%81NH%20%C4%90%E1%BA%A0O.mp3', 'https://archive.org/download/phap-ngu-luc-hoa-thuong-tuyen-hoa/Phap-Ngu-Luc.mp3', 'https://ia601506.us.archive.org/12/items/phap-ngu-thien-su-hu-van-p-1/Phap-Ngu-Thien-Su-Hu-Van-P1.mp3', 'https://ia801400.us.archive.org/11/items/phap-ngu-thien-su-hu-van-p-2/Phap-Ngu-Thien-Su-Hu-Van-P2.mp3', 'https://www.googleapis.com/drive/v3/files/1O38Rfhp1h5PlB0WIKm8RAGJCBfioK251?alt=media&key=AIzaSyDf1rGNbRhZcNEnrDv_NLf-DApGMPEhsJc', 'https://stream13.mixcloud.com/secure/c/m4a/64/d/5/9/c/3079-9e0e-4ac8-a85c-026197b2e0ac.m4a?sig=B4togVyMW1rsLeaM5VDrAA', 'https://www.googleapis.com/drive/v3/files/1jhtW9V7g9XGySAiI5hEAHy6P8GZDklbu?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY', 'https://dl.dropboxusercontent.com/s/trjzebv94neizs8/Kinh-Dieu-Phap-Lien-Hoa-Thich-Tri-Tinh.mp3', 'https://www.googleapis.com/drive/v3/files/159a4pmEjN9z2OHSRjIcNTpz8VAe1AzDp?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY',
+'https://ia803101.us.archive.org/2/items/niemphatthapyeuthichthientam/NIEM-PHAT-THAP-YEU-THICH-THIEN-TAM.mp3',
+'https://stream14.mixcloud.com/secure/c/m4a/64/e/a/b/e/dd28-880d-4843-b87e-a54a267fb247.m4a?sig=bv7dN3v0AgDtRNyW8s3DGg',
+'https://www.googleapis.com/drive/v3/files/1Bi4jAWcAlp0NI0xFFq1oCpVquA3azokk?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',
+'https://ia801407.us.archive.org/33/items/doc-kinh-dai-thua-vo-luong-tho-ht.-thich-duc-niem-dich/%C4%90%E1%BB%8Dc-%20Kinh%20%C4%90%E1%BA%A1i%20Th%E1%BB%ABa%20V%C3%B4%20L%C6%B0%E1%BB%A3ng%20Th%E1%BB%8D%20%28HT.%20Th%C3%ADch%20%C4%90%E1%BB%A9c%20Ni%E1%BB%87m%20d%E1%BB%8Bch%29.mp3',
+'https://dl.dropboxusercontent.com/s/4ikrue7vwc6h7mf/kinh-kim-cang-dieu-phap-am.mp3',
+'https://dl.dropboxusercontent.com/s/6l4zzitt80d58a2/Dien-Doc-Kinh_Quan_Vo_Luong_Tho.mp3', 
+'https://stream11.mixcloud.com/secure/c/m4a/64/a/3/9/9/d6ee-8ef2-451d-8c98-069179af3ecd.m4a?sig=lxHkWxHMJiQWwHotiQRkog',
+'https://www.googleapis.com/drive/v3/files/19CYC8LsRaBD6gmSzKwaGROs25Jp8k41b?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',                  'https://www.googleapis.com/drive/v3/files/1tOLqVnxZn8Lu9TG-_36iwoRZW2EVRzU5?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',
+'https://www.googleapis.com/drive/v3/files/1WlDs61xh16TmjSys_XIbVHhNB6Zb__5C?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',
+'https://www.googleapis.com/drive/v3/files/1_mmkQFixjO8Y1qeZCIehbN3dH9kK877R?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',                    'https://www.googleapis.com/drive/v3/files/1xDp-N6FC8uYaf2ClPKr0tAaA03pO5B8c?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',       
+'https://www.googleapis.com/drive/v3/files/1EIL0FqFDEnhhIsdeb0J_z-MK9jQlnN0G?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',                    'https://www.googleapis.com/drive/v3/files/1DqLCwVYTh4UfICUE3cIsrlvqL_gyb9of?alt=media&key=AIzaSyA6o2-J_55CdW4yVakB2AfRHAqpIcun-1Y',
+'https://dl.dropboxusercontent.com/s/rd47yrar4eagfse/Chu-Lang-Nghiem-Ke-Va-Giang-Giai-Tap-01.mp3',
+'https://dl.dropboxusercontent.com/s/7cqw9xnamgi9j82/Chu-Lang-Nghiem-Ke-Va-Giang-Giai-Tap-02.mp3',
+'https://www.googleapis.com/drive/v3/files/10NfP0VtNYSJ_RYKmTO7ZNaL6ng0UJ4CW?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbUY',
+'https://www.googleapis.com/drive/v3/files/1UmZ96_nY43li-AlpNtSrdH_0nGzbnqBt?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU', 
+'https://archive.org/download/dien-doc-tho-khang-bao-giam/Dien-Doc-Tho-Khang-Bao-Giam.mp3',                            
+'https://www.googleapis.com/drive/v3/files/1bbDZzQeqUuRXn-YwRG8fGHmCDCiSy5kN?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY',                     'https://dl.dropboxusercontent.com/s/cz3iugvldbsqo08/LA-THU-TINH-DO-02.mp3',       
+'https://archive.org/download/anquangdaisugiangonlucphan1/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%201.mp3',                            
+'https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3',                            
+'https://www.googleapis.com/drive/v3/files/10RtB36-717v-5VsZYUg-GNeWGrZeRWoD?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY',                     'https://archive.org/download/anquanggiangonlucloivang/%E1%BA%A4n%20Quang%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20L%E1%BB%9Di%20V%C3%A0ng%20%28%C4%90%E1%BB%A7%20c%C3%A1c%20ph%E1%BA%A7n%201%2C%202%2C%203%20v%C3%A0%204%29.mp3'       
+ ],playPreviousTrackButton = $('#play-previous'),playNextTrackButton = $('#play-next'),currIndex = -1;
+
+  function playPause()
+  {
+    setTimeout(function ()
+    {
+      if (audio.paused)
+      {
+        playerTrack.addClass('active');
+        albumArt.addClass('active');
+        checkBuffering();
+        i.attr('class', 'fas fa-pause');
+        audio.play();
+      } else
+
+      {
+        playerTrack.removeClass('active');
+        albumArt.removeClass('active');
+        clearInterval(buffInterval);
+        albumArt.removeClass('buffering');
+        i.attr('class', 'fas fa-play');
+        audio.pause();
+      }
+    }, 300);
+  }
+
+
+  function showHover(event)
+  {
+    seekBarPos = sArea.offset();
+    seekT = event.clientX - seekBarPos.left;
+    seekLoc = audio.duration * (seekT / sArea.outerWidth());
+
+    sHover.width(seekT);
+
+    cM = seekLoc / 60;
+
+    ctMinutes = Math.floor(cM);
+    ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
+
+    if (ctMinutes < 0 || ctSeconds < 0)
+    return;
+
+    if (ctMinutes < 0 || ctSeconds < 0)
+    return;
+
+    if (ctMinutes < 10)
+    ctMinutes = '0' + ctMinutes;
+    if (ctSeconds < 10)
+    ctSeconds = '0' + ctSeconds;
+
+    if (isNaN(ctMinutes) || isNaN(ctSeconds))
+    insTime.text('--:--');else
+
+    insTime.text(ctMinutes + ':' + ctSeconds);
+
+    insTime.css({ 'left': seekT, 'margin-left': '-21px' }).fadeIn(0);
+
+  }
+
+  function hideHover()
+  {
+    sHover.width(0);
+    insTime.text('00:00').css({ 'left': '0px', 'margin-left': '0px' }).fadeOut(0);
+  }
+
+  function playFromClickedPos()
+  {
+    audio.currentTime = seekLoc;
+    seekBar.width(seekT);
+    hideHover();
+  }
+
+  function updateCurrTime()
+  {
+    nTime = new Date();
+    nTime = nTime.getTime();
+
+    if (!tFlag)
+    {
+      tFlag = true;
+      trackTime.addClass('active');
+    }
+
+    curMinutes = Math.floor(audio.currentTime / 60);
+    curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
+
+    durMinutes = Math.floor(audio.duration / 60);
+    durSeconds = Math.floor(audio.duration - durMinutes * 60);
+
+    playProgress = audio.currentTime / audio.duration * 100;
+
+    if (curMinutes < 10)
+    curMinutes = '0' + curMinutes;
+    if (curSeconds < 10)
+    curSeconds = '0' + curSeconds;
+
+    if (durMinutes < 10)
+    durMinutes = '0' + durMinutes;
+    if (durSeconds < 10)
+    durSeconds = '0' + durSeconds;
+
+    if (isNaN(curMinutes) || isNaN(curSeconds))
+    tProgress.text('00:00');else
+
+    tProgress.text(curMinutes + ':' + curSeconds);
+
+    if (isNaN(durMinutes) || isNaN(durSeconds))
+    tTime.text('00:00');else
+
+    tTime.text(durMinutes + ':' + durSeconds);
+
+    if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
+    trackTime.removeClass('active');else
+
+    trackTime.addClass('active');
+
+
+    seekBar.width(playProgress + '%');
+
+    if (playProgress == 100)
+    {
+      i.attr('class', 'fa fa-play');
+      seekBar.width(0);
+      tProgress.text('00:00');
+      albumArt.removeClass('buffering').removeClass('active');
+      clearInterval(buffInterval);
+    }
+  }
+
+  function checkBuffering()
+  {
+    clearInterval(buffInterval);
+    buffInterval = setInterval(function ()
+    {
+      if (nTime == 0 || bTime - nTime > 1000)
+      albumArt.addClass('buffering');else
+
+      albumArt.removeClass('buffering');
+
+      bTime = new Date();
+      bTime = bTime.getTime();
+
+    }, 100);
+  }
+
+  function selectTrack(flag)
+  {
+    if (flag == 0 || flag == 1)
+    ++currIndex;else
+
+    --currIndex;
+
+    if (currIndex > -1 &amp;&amp; currIndex < albumArtworks.length)
+    {
+      if (flag == 0)
+      i.attr('class', 'fa fa-play');else
+
+      {
+        albumArt.removeClass('buffering');
+        i.attr('class', 'fa fa-pause');
+      }
+
+      seekBar.width(0);
+      trackTime.removeClass('active');
+      tProgress.text('00:00');
+      tTime.text('00:00');
+
+      currAlbum = albums[currIndex];
+      currTrackName = trackNames[currIndex];
+      currArtwork = albumArtworks[currIndex];
+
+      audio.src = trackUrl[currIndex];
+
+      nTime = 0;
+      bTime = new Date();
+      bTime = bTime.getTime();
+
+      if (flag != 0)
+      {
+        audio.play();
+        playerTrack.addClass('active');
+        albumArt.addClass('active');
+
+        clearInterval(buffInterval);
+        checkBuffering();
+      }
+
+      albumName.text(currAlbum);
+      trackName.text(currTrackName);
+      albumArt.find('img.active').removeClass('active');
+      $('#' + currArtwork).addClass('active');
+
+      bgArtworkUrl = $('#' + currArtwork).attr('src');
+
+      bgArtwork.css({ 'background-image': 'url(' + bgArtworkUrl + ')' });
+    } else
+
+    {
+      if (flag == 0 || flag == 1)
+      --currIndex;else
+
+      ++currIndex;
+    }
+  }
+
+  function initPlayer()
+  {
+    audio = new Audio();
+
+    selectTrack(0);
+
+    audio.loop = false;
+
+    playPauseButton.on('click', playPause);
+
+    sArea.mousemove(function (event) {showHover(event);});
+
+    sArea.mouseout(hideHover);
+
+    sArea.on('click', playFromClickedPos);
+
+    $(audio).on('timeupdate', updateCurrTime);
+
+    playPreviousTrackButton.on('click', function () {selectTrack(-1);});
+    playNextTrackButton.on('click', function () {selectTrack(1);});
+  }
+
+  initPlayer();
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
+" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowTransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+</div>
+</body>
+</html>
