@@ -268,7 +268,7 @@ margin-left:7px;
   <script src='https://kinhlangnghiem.github.io/kinhlangnghiem/maynghephap_jquery.min.js'></script>
 
 <script src='https://kinhlangnghiem.github.io/kinhlangnghiem/maynghephap_plyr.min.js'></script>
-      <script id="rendered-js" >
+     <script id="rendered-js">
 // Mythium Archive: https://archive.org/details/mythium/
 
 jQuery(function ($) {
@@ -291,188 +291,78 @@ jQuery(function ($) {
     // initialize playlist and controls
     var index = 0,
     playing = false,
-    mediaPath = 'https://archive.org/download/mythium/',
+    mediaPath = '',
     extension = '',
     tracks = [{
       "track": 1,
-      "name": "All This Is - Joe L.'s Studio",
-      "duration": "2:46",
-      "file": "JLS_ATI" },
+      "name": "Pháp Ngữ Của Hòa Thượng Tuyên Hóa",
+      "duration": "04:27:40",
+      "file": "https://archive.org/download/phap-ngu-luc-hoa-thuong-tuyen-hoa/Phap-Ngu-Luc.mp3" },
     {
       "track": 2,
-      "name": "The Forsaken - Broadwing Studio (Final Mix)",
-      "duration": "8:30",
-      "file": "BS_TF" },
+      "name": "KINH THỦ LĂNG  NGHIÊM - Hòa Thượng Tuyên Hóa",
+      "duration": "24:32:34",
+      "file": "https://ia600208.us.archive.org/7/items/kinh-lang-nghiem_HOATHUONGTUYENHOA/KINH-LANG-NGHIEM.mp3" },
     {
       "track": 3,
-      "name": "All The King's Men - Broadwing Studio (Final Mix)",
-      "duration": "5:01",
-      "file": "BS_ATKM" },
+      "name": "Khai Thị Quyển 05 - Hòa Thượng Tuyên Hóa",
+      "duration": "6:33:13",
+      "file": "https://www.googleapis.com/drive/v3/files/1D3LqEaoaHmaESoREQJq-ET1jzDyGRNlj?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
     {
       "track": 4,
-      "name": "The Forsaken - Broadwing Studio (First Mix)",
-      "duration": "8:31",
-      "file": "BSFM_TF" },
+      "name": "Khai Thị Quyển 04 - Hòa Thượng Tuyên Hóa",
+      "duration": "5:11:22",
+      "file": "https://www.googleapis.com/drive/v3/files/1XmFuQ0z0IiVFthmObllM8br9-HMAzIzs?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
     {
       "track": 5,
-      "name": "All The King's Men - Broadwing Studio (First Mix)",
-      "duration": "5:05",
-      "file": "BSFM_ATKM" },
+      "name": "Khai Thị Quyển 03 - Hòa Thượng Tuyên Hóa",
+      "duration": "4:39:39",
+      "file": "https://www.googleapis.com/drive/v3/files/1bB0Efq8aQVezvkrssw4ttpR-t-4XINxB?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
     {
       "track": 6,
-      "name": "All This Is - Alternate Cuts",
-      "duration": "2:48",
-      "file": "AC_ATI" },
+      "name": " Khai Thị Quyển 02 - Hòa Thượng Tuyên Hóa ",
+      "duration": "2:19:42",
+      "file": "https://www.googleapis.com/drive/v3/files/1QbFnQjAgPFgDcqpAO5yk3ZucBdsVplCg?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
     {
       "track": 7,
-      "name": "All The King's Men (Take 1) - Alternate Cuts",
-      "duration": "5:44",
-      "file": "AC_ATKMTake_1" },
+      "name": " Khai Thị Quyển 01 - Hòa Thượng Tuyên Hóa  ",
+      "duration": "6:12:53",
+      "file": "https://archive.org/download/hoa-thuong-tuyen-hoa-khai-thi-quyen-01/H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a%20Khai%20Th%E1%BB%8B%20Quy%E1%BB%83n%2001.mp3" },
     {
       "track": 8,
-      "name": "All The King's Men (Take 2) - Alternate Cuts",
-      "duration": "5:26",
-      "file": "AC_ATKMTake_2" },
+      "name": " Khai Thị Quyển 06 - Hòa Thượng Tuyên Hóa ",
+      "duration": "4:55:26",
+      "file": "https://www.googleapis.com/drive/v3/files/14lV061yg4649lArS2z4zZn70U-Zuy51k?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
     {
       "track": 9,
-      "name": "Magus - Alternate Cuts",
-      "duration": "5:46",
-      "file": "AC_M" },
+      "name": "Cuộc Đời Và Đạo Nghiệp Của Hòa Thượng Tuyên Hóa ",
+      "duration": "10:49:18",
+      "file": "https://archive.org/download/hoathuongtuyenhoa19181995/H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a%20%281918-1995%29.mp3" },
     {
       "track": 10,
-      "name": "The State Of Wearing Address (fucked up) - Alternate Cuts",
-      "duration": "5:25",
-      "file": "AC_TSOWAfucked_up" },
+      "name": "Chú Đại Bi Hòa Thượng Tuyên Hóa Giảng Giải ",
+      "duration": "2:58:32",
+      "file": "https://www.googleapis.com/drive/v3/files/1PKml_HWXXcSyEGO80DKcDKbODa56sCoV?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
     {
       "track": 11,
-      "name": "Magus - Popeye's (New Years '04 - '05)",
-      "duration": "5:53",
-      "file": "PNY04-05_M" },
+      "name": "Kinh A Di Đà Hòa Thượng Tuyên Hóa Giảng Giải",
+      "duration": "5:14:01",
+      "file": "https://www.googleapis.com/drive/v3/files/1i2ARSz8wcVteyMwtG4MpoaUyS___Yyq0?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
     {
       "track": 12,
-      "name": "On The Waterfront - Popeye's (New Years '04 - '05)",
-      "duration": "4:40",
-      "file": "PNY04-05_OTW" },
+      "name": "BÁT CHÁNH ĐẠO VÀ TỨ DIỆU ĐẾ ",
+      "duration": "8:31:09",
+      "file": "https://archive.org/download/Bat_Chanh_Dao-Tu-Dieu-De/B%C3%81T%20CH%C3%81NH%20%C4%90%E1%BA%A0O.mp3" },
     {
       "track": 13,
-      "name": "Trance - Popeye's (New Years '04 - '05)",
-      "duration": "13:15",
-      "file": "PNY04-05_T" },
+      "name": "Kinh Kim Cang Giảng Giải ",
+      "duration": "4:32:27",
+      "file": "https://www.googleapis.com/drive/v3/files/18n2-dTLy68qBGhz5w1UtRe9qw3y_RGWE?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
     {
       "track": 14,
-      "name": "The Forsaken - Popeye's (New Years '04 - '05)",
-      "duration": "8:12",
-      "file": "PNY04-05_TF" },
-    {
-      "track": 15,
-      "name": "The State Of Wearing Address - Popeye's (New Years '04 - '05)",
-      "duration": "7:02",
-      "file": "PNY04-05_TSOWA" },
-    {
-      "track": 16,
-      "name": "Magus - Popeye's (Valentine's Day '05)",
-      "duration": "5:43",
-      "file": "PVD_M" },
-    {
-      "track": 17,
-      "name": "Trance - Popeye's (Valentine's Day '05)",
-      "duration": "10:45",
-      "file": "PVD_T" },
-    {
-      "track": 18,
-      "name": "The State Of Wearing Address - Popeye's (Valentine's Day '05)",
-      "duration": "5:36",
-      "file": "PVD_TSOWA" },
-    {
-      "track": 19,
-      "name": "All This Is - Smith St. Basement (01/08/04)",
-      "duration": "2:48",
-      "file": "SSB01_08_04_ATI" },
-    {
-      "track": 20,
-      "name": "Magus - Smith St. Basement (01/08/04)",
-      "duration": "5:46",
-      "file": "SSB01_08_04_M" },
-    {
-      "track": 21,
-      "name": "Beneath The Painted Eye - Smith St. Basement (06/06/03)",
-      "duration": "13:07",
-      "file": "SSB06_06_03_BTPE" },
-    {
-      "track": 22,
-      "name": "Innocence - Smith St. Basement (06/06/03)",
-      "duration": "5:16",
-      "file": "SSB06_06_03_I" },
-    {
-      "track": 23,
-      "name": "Magus - Smith St. Basement (06/06/03)",
-      "duration": "5:46",
-      "file": "SSB06_06_03_M" },
-    {
-      "track": 24,
-      "name": "Madness Explored - Smith St. Basement (06/06/03)",
-      "duration": "4:51",
-      "file": "SSB06_06_03_ME" },
-    {
-      "track": 25,
-      "name": "The Forsaken - Smith St. Basement (06/06/03)",
-      "duration": "8:43",
-      "file": "SSB06_06_03_TF" },
-    {
-      "track": 26,
-      "name": "All This Is - Smith St. Basement (12/28/03)",
-      "duration": "3:00",
-      "file": "SSB12_28_03_ATI" },
-    {
-      "track": 27,
-      "name": "Magus - Smith St. Basement (12/28/03)",
-      "duration": "6:09",
-      "file": "SSB12_28_03_M" },
-    {
-      "track": 28,
-      "name": "Madness Explored - Smith St. Basement (12/28/03)",
-      "duration": "5:05",
-      "file": "SSB12_28_03_ME" },
-    {
-      "track": 29,
-      "name": "Trance - Smith St. Basement (12/28/03)",
-      "duration": "12:32",
-      "file": "SSB12_28_03_T" },
-    {
-      "track": 30,
-      "name": "The Forsaken - Smith St. Basement (12/28/03)",
-      "duration": "8:56",
-      "file": "SSB12_28_03_TF" },
-    {
-      "track": 31,
-      "name": "All This Is (Take 1) - Smith St. Basement (Nov. '03)",
-      "duration": "4:55",
-      "file": "SSB___11_03_ATITake_1" },
-    {
-      "track": 32,
-      "name": "All This Is (Take 2) - Smith St. Basement (Nov. '03)",
-      "duration": "5:45",
-      "file": "SSB___11_03_ATITake_2" },
-    {
-      "track": 33,
-      "name": "Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)",
-      "duration": "14:05",
-      "file": "SSB___11_03_BTPETake_1" },
-    {
-      "track": 34,
-      "name": "Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)",
-      "duration": "13:25",
-      "file": "SSB___11_03_BTPETake_2" },
-    {
-      "track": 35,
-      "name": "The Forsaken (Take 1) - Smith St. Basement (Nov. '03)",
-      "duration": "8:37",
-      "file": "SSB___11_03_TFTake_1" },
-    {
-      "track": 36,
-      "name": "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
-      "duration": "8:36",
-      "file": "SSB___11_03_TFTake_2" }],
+      "name": " Ngữ Lục Của Hòa Thượng Tuyên Hóa ",
+      "duration": "4:55:25",
+      "file": "https://dn720307.ca.archive.org/0/items/ngu-luc-cua-hoa-thuong-tuyen-hoa/Ng%E1%BB%AF%20L%E1%BB%A5c%20c%E1%BB%A7a%20H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a.mp3" }],
 
     buildPlaylist = $.each(tracks, function (key, value) {
       var trackNumber = value.track,
