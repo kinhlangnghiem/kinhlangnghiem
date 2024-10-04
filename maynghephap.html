@@ -4,7 +4,21 @@
 
 <head>
 
+<title> Kinh Lăng Nghiêm - Hoà Thượng Tuyên Hoá </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Start: injected by Adguard -->
+
+<!-- Start: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731918089155&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731689034557&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<link rel="stylesheet" href="https://kinhlangnghiem.github.io/nammoadidaphat/reset.min.css">
 
   <link rel='stylesheet' href='https://kinhlangnghiem.github.io/kinhlangnghiem/maynghephap_plyr.io_3.6.2_plyr.css'>
 
@@ -266,9 +280,9 @@ margin-left:7px;
     </div>
 </div>
   <script src='https://kinhlangnghiem.github.io/kinhlangnghiem/maynghephap_jquery.min.js'></script>
-
+<script src='https://kinhlangnghiem.github.io/nammoadidaphat/html5media.min.js'></script>
 <script src='https://kinhlangnghiem.github.io/kinhlangnghiem/maynghephap_plyr.min.js'></script>
-     <script id="rendered-js">
+ <script id="rendered-js" >
 // Mythium Archive: https://archive.org/details/mythium/
 
 jQuery(function ($) {
@@ -291,80 +305,293 @@ jQuery(function ($) {
     // initialize playlist and controls
     var index = 0,
     playing = false,
-    mediaPath = '',
+    mediaPath = 'https://archive.org/download/mythium/',
     extension = '',
     tracks = [{
       "track": 1,
-      "name": "Pháp Ngữ Của Hòa Thượng Tuyên Hóa",
-      "duration": "04:27:40",
-      "file": "https://archive.org/download/phap-ngu-luc-hoa-thuong-tuyen-hoa/Phap-Ngu-Luc.mp3" },
+      "name": "All This Is - Joe L.'s Studio",
+      "duration": "2:46",
+      "file": "JLS_ATI" },
     {
       "track": 2,
-      "name": "KINH THỦ LĂNG  NGHIÊM - Hòa Thượng Tuyên Hóa",
-      "duration": "24:32:34",
-      "file": "https://ia600208.us.archive.org/7/items/kinh-lang-nghiem_HOATHUONGTUYENHOA/KINH-LANG-NGHIEM.mp3" },
+      "name": "The Forsaken - Broadwing Studio (Final Mix)",
+      "duration": "8:30",
+      "file": "BS_TF" },
     {
       "track": 3,
-      "name": "Khai Thị Quyển 05 - Hòa Thượng Tuyên Hóa",
-      "duration": "6:33:13",
-      "file": "https://www.googleapis.com/drive/v3/files/1D3LqEaoaHmaESoREQJq-ET1jzDyGRNlj?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
+      "name": "All The King's Men - Broadwing Studio (Final Mix)",
+      "duration": "5:01",
+      "file": "BS_ATKM" },
     {
       "track": 4,
-      "name": "Khai Thị Quyển 04 - Hòa Thượng Tuyên Hóa",
-      "duration": "5:11:22",
-      "file": "https://www.googleapis.com/drive/v3/files/1XmFuQ0z0IiVFthmObllM8br9-HMAzIzs?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
+      "name": "The Forsaken - Broadwing Studio (First Mix)",
+      "duration": "8:31",
+      "file": "BSFM_TF" },
     {
       "track": 5,
-      "name": "Khai Thị Quyển 03 - Hòa Thượng Tuyên Hóa",
-      "duration": "4:39:39",
-      "file": "https://www.googleapis.com/drive/v3/files/1bB0Efq8aQVezvkrssw4ttpR-t-4XINxB?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
+      "name": "All The King's Men - Broadwing Studio (First Mix)",
+      "duration": "5:05",
+      "file": "BSFM_ATKM" },
     {
       "track": 6,
-      "name": " Khai Thị Quyển 02 - Hòa Thượng Tuyên Hóa ",
-      "duration": "2:19:42",
-      "file": "https://www.googleapis.com/drive/v3/files/1QbFnQjAgPFgDcqpAO5yk3ZucBdsVplCg?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
+      "name": "All This Is - Alternate Cuts",
+      "duration": "2:48",
+      "file": "AC_ATI" },
     {
       "track": 7,
-      "name": " Khai Thị Quyển 01 - Hòa Thượng Tuyên Hóa  ",
-      "duration": "6:12:53",
-      "file": "https://archive.org/download/hoa-thuong-tuyen-hoa-khai-thi-quyen-01/H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a%20Khai%20Th%E1%BB%8B%20Quy%E1%BB%83n%2001.mp3" },
+      "name": "All The King's Men (Take 1) - Alternate Cuts",
+      "duration": "5:44",
+      "file": "AC_ATKMTake_1" },
     {
       "track": 8,
-      "name": " Khai Thị Quyển 06 - Hòa Thượng Tuyên Hóa ",
-      "duration": "4:55:26",
-      "file": "https://www.googleapis.com/drive/v3/files/14lV061yg4649lArS2z4zZn70U-Zuy51k?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
+      "name": "All The King's Men (Take 2) - Alternate Cuts",
+      "duration": "5:26",
+      "file": "AC_ATKMTake_2" },
     {
       "track": 9,
-      "name": "Cuộc Đời Và Đạo Nghiệp Của Hòa Thượng Tuyên Hóa ",
-      "duration": "10:49:18",
-      "file": "https://archive.org/download/hoathuongtuyenhoa19181995/H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a%20%281918-1995%29.mp3" },
+      "name": "Magus - Alternate Cuts",
+      "duration": "5:46",
+      "file": "AC_M" },
     {
       "track": 10,
-      "name": "Chú Đại Bi Hòa Thượng Tuyên Hóa Giảng Giải ",
-      "duration": "2:58:32",
-      "file": "https://www.googleapis.com/drive/v3/files/1PKml_HWXXcSyEGO80DKcDKbODa56sCoV?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
+      "name": "The State Of Wearing Address (fucked up) - Alternate Cuts",
+      "duration": "5:25",
+      "file": "AC_TSOWAfucked_up" },
     {
       "track": 11,
-      "name": "Kinh A Di Đà Hòa Thượng Tuyên Hóa Giảng Giải",
-      "duration": "5:14:01",
-      "file": "https://www.googleapis.com/drive/v3/files/1i2ARSz8wcVteyMwtG4MpoaUyS___Yyq0?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
+      "name": "Magus - Popeye's (New Years '04 - '05)",
+      "duration": "5:53",
+      "file": "PNY04-05_M" },
     {
       "track": 12,
-      "name": "BÁT CHÁNH ĐẠO VÀ TỨ DIỆU ĐẾ ",
-      "duration": "8:31:09",
-      "file": "https://archive.org/download/Bat_Chanh_Dao-Tu-Dieu-De/B%C3%81T%20CH%C3%81NH%20%C4%90%E1%BA%A0O.mp3" },
+      "name": "On The Waterfront - Popeye's (New Years '04 - '05)",
+      "duration": "4:40",
+      "file": "PNY04-05_OTW" },
     {
       "track": 13,
-      "name": "Kinh Kim Cang Giảng Giải ",
-      "duration": "4:32:27",
-      "file": "https://www.googleapis.com/drive/v3/files/18n2-dTLy68qBGhz5w1UtRe9qw3y_RGWE?alt=media&key=AIzaSyChQB7GdyJgbttOlRZmfkQakidBvQbNRbU" },
+      "name": "Trance - Popeye's (New Years '04 - '05)",
+      "duration": "13:15",
+      "file": "PNY04-05_T" },
     {
       "track": 14,
-      "name": " Ngữ Lục Của Hòa Thượng Tuyên Hóa ",
-      "duration": "4:55:25",
-      "file": "https://dn720307.ca.archive.org/0/items/ngu-luc-cua-hoa-thuong-tuyen-hoa/Ng%E1%BB%AF%20L%E1%BB%A5c%20c%E1%BB%A7a%20H%C3%B2a%20Th%C6%B0%E1%BB%A3ng%20Tuy%C3%AAn%20H%C3%B3a.mp3" }],
+      "name": "The Forsaken - Popeye's (New Years '04 - '05)",
+      "duration": "8:12",
+      "file": "PNY04-05_TF" },
+    {
+      "track": 15,
+      "name": "The State Of Wearing Address - Popeye's (New Years '04 - '05)",
+      "duration": "7:02",
+      "file": "PNY04-05_TSOWA" },
+    {
+      "track": 16,
+      "name": "Magus - Popeye's (Valentine's Day '05)",
+      "duration": "5:43",
+      "file": "PVD_M" },
+    {
+      "track": 17,
+      "name": "Trance - Popeye's (Valentine's Day '05)",
+      "duration": "10:45",
+      "file": "PVD_T" },
+    {
+      "track": 18,
+      "name": "The State Of Wearing Address - Popeye's (Valentine's Day '05)",
+      "duration": "5:36",
+      "file": "PVD_TSOWA" },
+    {
+      "track": 19,
+      "name": "All This Is - Smith St. Basement (01/08/04)",
+      "duration": "2:48",
+      "file": "SSB01_08_04_ATI" },
+    {
+      "track": 20,
+      "name": "Magus - Smith St. Basement (01/08/04)",
+      "duration": "5:46",
+      "file": "SSB01_08_04_M" },
+    {
+      "track": 21,
+      "name": "Beneath The Painted Eye - Smith St. Basement (06/06/03)",
+      "duration": "13:07",
+      "file": "SSB06_06_03_BTPE" },
+    {
+      "track": 22,
+      "name": "Innocence - Smith St. Basement (06/06/03)",
+      "duration": "5:16",
+      "file": "SSB06_06_03_I" },
+    {
+      "track": 23,
+      "name": "Magus - Smith St. Basement (06/06/03)",
+      "duration": "5:46",
+      "file": "SSB06_06_03_M" },
+    {
+      "track": 24,
+      "name": "Madness Explored - Smith St. Basement (06/06/03)",
+      "duration": "4:51",
+      "file": "SSB06_06_03_ME" },
+    {
+      "track": 25,
+      "name": "The Forsaken - Smith St. Basement (06/06/03)",
+      "duration": "8:43",
+      "file": "SSB06_06_03_TF" },
+    {
+      "track": 26,
+      "name": "All This Is - Smith St. Basement (12/28/03)",
+      "duration": "3:00",
+      "file": "SSB12_28_03_ATI" },
+    {
+      "track": 27,
+      "name": "Magus - Smith St. Basement (12/28/03)",
+      "duration": "6:09",
+      "file": "SSB12_28_03_M" },
+    {
+      "track": 28,
+      "name": "Madness Explored - Smith St. Basement (12/28/03)",
+      "duration": "5:05",
+      "file": "SSB12_28_03_ME" },
+    {
+      "track": 29,
+      "name": "Trance - Smith St. Basement (12/28/03)",
+      "duration": "12:32",
+      "file": "SSB12_28_03_T" },
+    {
+      "track": 30,
+      "name": "The Forsaken - Smith St. Basement (12/28/03)",
+      "duration": "8:56",
+      "file": "SSB12_28_03_TF" },
+    {
+      "track": 31,
+      "name": "All This Is (Take 1) - Smith St. Basement (Nov. '03)",
+      "duration": "4:55",
+      "file": "SSB___11_03_ATITake_1" },
+    {
+      "track": 32,
+      "name": "All This Is (Take 2) - Smith St. Basement (Nov. '03)",
+      "duration": "5:45",
+      "file": "SSB___11_03_ATITake_2" },
+    {
+      "track": 33,
+      "name": "Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)",
+      "duration": "14:05",
+      "file": "SSB___11_03_BTPETake_1" },
+    {
+      "track": 34,
+      "name": "Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)",
+      "duration": "13:25",
+      "file": "SSB___11_03_BTPETake_2" },
+    {
+      "track": 35,
+      "name": "The Forsaken (Take 1) - Smith St. Basement (Nov. '03)",
+      "duration": "8:37",
+      "file": "SSB___11_03_TFTake_1" },
+    {
+      "track": 36,
+      "name": "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
+      "duration": "8:36",
+      "file": "SSB___11_03_TFTake_2" }],
 
     buildPlaylist = $.each(tracks, function (key, value) {
+      var trackNumber = value.track,
+      trackName = value.name,
+      trackDuration = value.duration;
+      if (trackNumber.toString().length === 1) {
+        trackNumber = '0' + trackNumber;
+      }
+      $('#plList').append('<li> \
+                    <div class="plItem"> \
+                        <span class="plNum">' + trackNumber + '.</span> \
+                        <span class="plTitle">' + trackName + '</span> \
+                        <span class="plLength">' + trackDuration + '</span> \
+                    </div> \
+                </li>');
+    }),
+    trackCount = tracks.length,
+    npAction = $('#npAction'),
+    npTitle = $('#npTitle'),
+    audio = $('#audio1').on('play', function () {
+      playing = true;
+      npAction.text('Now Playing...');
+    }).on('pause', function () {
+      playing = false;
+      npAction.text('Paused...');
+    }).on('ended', function () {
+      npAction.text('Paused...');
+      if (index + 1 < trackCount) {
+        index++;
+        loadTrack(index);
+        audio.play();
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }).get(0),
+    btnPrev = $('#btnPrev').on('click', function () {
+      if (index - 1 > -1) {
+        index--;
+        loadTrack(index);
+        if (playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    btnNext = $('#btnNext').on('click', function () {
+      if (index + 1 < trackCount) {
+        index++;
+        loadTrack(index);
+        if (playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    li = $('#plList li').on('click', function () {
+      var id = parseInt($(this).index());
+      if (id !== index) {
+        playTrack(id);
+      }
+    }),
+    loadTrack = function (id) {
+      $('.plSel').removeClass('plSel');
+      $('#plList li:eq(' + id + ')').addClass('plSel');
+      npTitle.text(tracks[id].name);
+      index = id;
+      audio.src = mediaPath + tracks[id].file + extension;
+      updateDownload(id, audio.src);
+    },
+    updateDownload = function (id, source) {
+      player.on('loadedmetadata', function () {
+        $('a[data-plyr="download"]').attr('href', source);
+      });
+    },
+    playTrack = function (id) {
+      loadTrack(id);
+      audio.play();
+    };
+    extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+    loadTrack(index);
+  } else {
+    // no audio support
+    $('.column').addClass('hidden');
+    var noSupport = $('#audio1').text();
+    $('.container').append('<p class="no-support">' + noSupport + '</p>');
+  }
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
+
+
+      buildPlaylist = $.each(tracks, function (key, value) {
       var trackNumber = value.track,
       trackName = value.name,
       trackDuration = value.duration;
