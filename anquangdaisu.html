@@ -1,0 +1,459 @@
+
+
+
+<title> ĐẶNG VĂN QUÝ </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Start: injected by Adguard -->
+
+<!-- Start: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731918089155&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731689034557&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
+<link rel="stylesheet" href="https://kinhlangnghiem.github.io/nammoadidaphat/reset.min.css">
+<link rel='stylesheet' href='https://kinhlangnghiem.github.io/nammoadidaphat/plyr.css'>
+<style>
+/* Font Family
+================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
+
+/* Global Styles
+================================================== */
+
+html,body {
+-webkit-font-smoothing:antialiased;
+-webkit-text-size-adjust:100%;
+background-color:#0665a2;
+color:#fff;
+font-size:1rem;
+font-family:"Oxygen", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight:400;
+letter-spacing:.025rem;
+line-height:1.618;
+padding:1rem 0;
+}
+
+*,::before,::after {
+box-sizing:border-box;
+}
+
+* {
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-tap-highlight-color:transparent;
+}
+
+
+/* Setup
+================================================== */
+
+.container { position:relative; margin:0 auto; max-width:800px; width:100%; }
+.column { width:inherit; }
+
+
+/* Typography / Links
+================================================== */
+
+p { color:#fff; display:block; font-size:.9rem; font-weight:400; margin:0 0 2px; }
+
+a,a:visited { color:#8cc3e6; outline:0; text-decoration:underline; }
+a:hover,a:focus { color:#bbdef5; }
+p a,p a:visited { line-height:inherit; }
+
+
+/* Misc.
+================================================== */
+
+.add-bottom { margin-bottom:2rem !important; }
+.left { float:left; }
+.right { float:right; }
+.center { text-align:center; }
+.hidden { display:none; }
+
+.no-support {
+margin:2rem auto;
+text-align:center;
+width:90%;
+}
+
+
+/* Audio Player Styles
+================================================== */
+
+audio {
+display:none;
+}
+
+#audiowrap,
+#plwrap {
+margin:0 auto;
+}
+
+#tracks {
+font-size:0;
+position:relative;
+text-align:center;
+}
+
+#nowPlay {
+display:block;
+font-size:0;
+}
+
+#nowPlay span {
+display:inline-block;
+font-size:1.05rem;
+vertical-align:top;
+}
+
+#nowPlay span#npAction {
+padding:21px;
+width:30%;
+}
+
+#nowPlay span#npTitle {
+padding:21px;
+text-align:right;
+width:70%;
+}
+
+#plList li {
+cursor:pointer;
+display:block;
+margin:0;
+padding:21px 0;
+}
+
+#plList li:hover {
+background-color:rgba(0,0,0,.1);
+}
+
+.plItem {
+position:relative;
+}
+
+.plTitle {
+left:50px;
+overflow:hidden;
+position:absolute;
+right:65px;
+text-overflow:ellipsis;
+top:0;
+white-space:nowrap;
+}
+
+.plNum {
+padding-left:21px;
+width:25px;
+}
+
+.plLength {
+padding-left:21px;
+position:absolute;
+right:21px;
+top:0;
+}
+
+.plSel,
+.plSel:hover {
+background-color:rgba(0,0,0,.1);
+color:#fff;
+cursor:default !important;
+}
+
+#tracks a {
+border-radius:3px;
+color:#fff;
+cursor:pointer;
+display:inline-block;
+font-size:2.3rem;
+height:35px;
+line-height:.175;
+margin:0 5px 30px;
+padding:10px 15px;
+text-decoration:none;
+transition:background .3s ease;
+}
+
+#tracks a:last-child {
+margin-left:0;
+}
+
+#tracks a:hover,
+#tracks a:active {
+background-color:rgba(0,0,0,.1);
+color:#fff;
+}
+
+#tracks a::-moz-focus-inner {
+border:0;
+padding:0;
+}
+
+
+/* Plyr Overrides
+================================================== */
+
+.plyr--audio .plyr__controls {
+background-color:transparent;
+border:none;
+color:#fff;
+padding:20px 20px 20px 13px;
+width:100%;
+}
+
+a.plyr__controls__item.plyr__control:hover,
+.plyr--audio .plyr__controls button:hover,
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr__play-large {
+background-color:rgba(0,0,0,.1);
+}
+
+.plyr__progress--played,
+.plyr__volume--display {
+color:rgba(0,0,0,.1);
+}
+
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+background:rgba(0,0,0,.1);
+}
+
+.plyr--audio .plyr__progress--buffer {
+color:rgba(0,0,0,.1);
+}
+
+
+/* Media Queries
+================================================== */
+
+@media only screen and (max-width:600px) {
+    #nowPlay span#npAction { display:none; }
+    #nowPlay span#npTitle { display:block; text-align:center; width:100%; }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script src="https://kinhlangnghiem.github.io/nammoadidaphat/prefixfree.min.js"></script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="column add-bottom">
+<div id="mainwrap">
+<div id="nowPlay">
+<span id="npAction">Paused...</span><span id="npTitle"></span>
+</div>
+<div id="audiowrap">
+<div id="audio0">
+<audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+</div>
+<div id="tracks">
+<a id="btnPrev">&vltri;</a><a id="btnNext">&vrtri;</a>
+</div>
+</div>
+<div id="plwrap">
+<ul id="plList"></ul>
+</div>
+</div>
+</div>
+<div class="column add-bottom center">
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://kinhlangnghiem.github.io/nammoadidaphat/jquery.min.js'></script>
+<script src='https://kinhlangnghiem.github.io/nammoadidaphat/html5media.min.js'></script>
+<script src='https://kinhlangnghiem.github.io/nammoadidaphat/plyr.min.js'></script>
+<script id="rendered-js">
+// Mythium Archive: https://archive.org/details/mythium/
+
+jQuery(function ($) {
+  'use strict';
+  var supportsAudio = !!document.createElement('audio').canPlayType;
+  if (supportsAudio) {
+    // initialize plyr
+    var player = new Plyr('#audio1', {
+      controls: [
+      'restart',
+      'play',
+      'progress',
+      'current-time',
+      'duration',
+      'mute',
+      'volume',
+      'download'] });
+
+
+    // initialize playlist and controls
+    var index = 0,
+    playing = false,
+    mediaPath = '',
+    extension = '',
+    tracks = [{
+      "track": 1,
+      "name": " Lá Thư Tịnh Độ 01",
+      "duration": "04:27:40",
+      "file": "https://www.googleapis.com/drive/v3/files/1bbDZzQeqUuRXn-YwRG8fGHmCDCiSy5kN?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
+    {
+      "track": 2,
+      "name": " Lá Thư Tịnh Độ 02 ",
+      "duration": "2:19:42",
+      "file": "https://onedrive.live.com/download?resid=2DEB9445123F45DF!124&authkey=!ANATGGjoD2p6xv8" },
+    {
+      "track": 3,
+      "name": " ẤN QUANG VĂN SAO ",
+      "duration": "10:49:18",
+      "file": "https://dl.dropboxusercontent.com/s/8kkf7bu7n7a56hk/An-Quang-VanSao.mp3" },
+    {
+      "track": 4,
+      "name": " Ấn Quang Đại Sư Gia Ngôn Luật 01 ",
+      "duration": "2:58:32",
+      "file": "https://archive.org/download/anquangdaisugiangonlucphan1/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%201.mp3" },
+    {
+      "track": 5,
+      "name": " Ấn Quang Đại Sư Gia Ngôn Luật 02 ",
+      "duration": "5:14:01",
+      "file": "https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3" },
+    {
+      "track": 6,
+      "name": "04 Nhạc Niệm Phật  ",
+      "duration": "8:31:09",
+      "file": "https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3" },
+    {
+      "track": 7,
+      "name": " ẤN QUANG VĂN SAO LỜI KHAI THỊ VÀNG ",
+      "duration": "4:32:27",
+      "file": "https://archive.org/download/anquanggiangonlucloivang/%E1%BA%A4n%20Quang%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20L%E1%BB%9Di%20V%C3%A0ng%20%28%C4%90%E1%BB%A7%20c%C3%A1c%20ph%E1%BA%A7n%201%2C%202%2C%203%20v%C3%A0%204%29.mp3" },
+    {
+      "track": 5,
+      "name": " Ấn Quang Pháp Sư Gia Ngôn Luật 02 ",
+      "duration": "5:14:01",
+      "file": "https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3" },
+    {
+      "track": 6,
+      "name": " ĐẠI SƯ ẤN QUANG - KHAI THỊ NIỆM PHẬT ",
+      "duration": "8:31:09",
+      "file": "https://www.googleapis.com/drive/v3/files/1-OYoGmwK61slrxnmnYVPPbwIJh2dJiG4?alt=media&key=AIzaSyDJISHZXHEWz1hz1fo0p8FY_MkIq5pcaoA" },
+    {
+      "track": 7,
+      "name": " THỌ KHANG BẢO GIÁM ",
+      "duration": "4:32:27",
+      "file": "https://archive.org/download/dien-doc-tho-khang-bao-giam/Dien-Doc-Tho-Khang-Bao-Giam.mp3" },
+    {
+      "track": 8,
+      "name": " KHAI THỊ VỀ GIỚI DÂM ",
+      "duration": "4:55:25",
+      "file": "https://www.googleapis.com/drive/v3/files/1jhtW9V7g9XGySAiI5hEAHy6P8GZDklbu?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" }],
+
+    buildPlaylist = $.each(tracks, function (key, value) {
+      var trackNumber = value.track,
+      trackName = value.name,
+      trackDuration = value.duration;
+      if (trackNumber.toString().length === 1) {
+        trackNumber = '0' + trackNumber;
+      }
+      $('#plList').append('<li> \
+                    <div class="plItem"> \
+                        <span class="plNum">' + trackNumber + '.</span> \
+                        <span class="plTitle">' + trackName + '</span> \
+                        <span class="plLength">' + trackDuration + '</span> \
+                    </div> \
+                </li>');
+    }),
+    trackCount = tracks.length,
+    npAction = $('#npAction'),
+    npTitle = $('#npTitle'),
+    audio = $('#audio1').on('play', function () {
+      playing = true;
+      npAction.text('Đang Chạy ...');
+    }).on('pause', function () {
+      playing = false;
+      npAction.text('Paused...');
+    }).on('ended', function () {
+      npAction.text('Paused...');
+      if (index + 1 < trackCount) {
+        index++;
+        loadTrack(index);
+        audio.play();
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }).get(0),
+    btnPrev = $('#btnPrev').on('click', function () {
+      if (index - 1 > -1) {
+        index--;
+        loadTrack(index);
+        if (playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    btnNext = $('#btnNext').on('click', function () {
+      if (index + 1 < trackCount) {
+        index++;
+        loadTrack(index);
+        if (playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    li = $('#plList li').on('click', function () {
+      var id = parseInt($(this).index());
+      if (id !== index) {
+        playTrack(id);
+      }
+    }),
+    loadTrack = function (id) {
+      $('.plSel').removeClass('plSel');
+      $('#plList li:eq(' + id + ')').addClass('plSel');
+      npTitle.text(tracks[id].name);
+      index = id;
+      audio.src = mediaPath + tracks[id].file + extension;
+      updateDownload(id, audio.src);
+    },
+    updateDownload = function (id, source) {
+      player.on('loadedmetadata', function () {
+        $('a[data-plyr="download"]').attr('href', source);
+      });
+    },
+    playTrack = function (id) {
+      loadTrack(id);
+      audio.play();
+    };
+    extension = audio.canPlayType('audio/mpeg') ? '' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+    loadTrack(index);
+  } else {
+    // no audio support
+    $('.column').addClass('hidden');
+    var noSupport = $('#audio1').text();
+    $('.container').append('<p class="no-support">' + noSupport + '</p>');
+  }
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+
+<!--/.wrapper-->
+
+</html>
