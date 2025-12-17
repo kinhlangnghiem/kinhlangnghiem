@@ -1,5 +1,7 @@
 
-  <blockquote style="text-align: center;"><strong><font size="5"><span><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf"><font><span style="background-color: #0c343d; color: white;"> ẤQ </span><span style="background-color: #0c343d; color: #fcff01;">- GIA NGÔN LUẬT.</span><span style="background-color: #660000;"><span style="color: white;">PDF</span></span> </font><span style="background-color: #0c343d;">&nbsp;</span></a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf" style="background-color: #0c343d;">&nbsp;&nbsp;</a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-phap-su-van-sao.pdf"><font><span style="background-color: #0c343d; color: #00ffef;"> </span><span style="background-color: #0c343d; color: white;">Ấ-Q </span><span style="background-color: #0c343d; color: #01ffff;">VĂN SAO</span><span style="background-color: #0c343d; color: #00ffef;">.</span><span style="background-color: #660000;"><span style="color: white;">PDF </span></span></font></a></span></font></strong>    </blockquote>
+
+
+  <blockquote style="text-align: center;"><strong><font size="5"><span><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf"><font><span style="background-color: #0c343d; color: white;"> ẤQ </span><span style="background-color: #0c343d; color: #fcff01;">- GIA NGÔN LUẬT.</span><span style="background-color: #660000;"><span style="color: white;">PDF</span></span> </font><span style="background-color: #0c343d;">&nbsp;</span></a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf" style="background-color: #0c343d;">&nbsp;&nbsp;</a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-phap-su-van-sao.pdf"><font><span style="background-color: #0c343d; color: #00ffef;"> </span><span style="background-color: #0c343d; color: white;">ẤN QUANG </span><span style="background-color: #0c343d; color: #01ffff;">VĂN SAO</span><span style="background-color: #0c343d; color: #00ffef;">.</span><span style="background-color: #660000;"><span style="color: white;">PDF </span></span></font></a></span></font></strong>    </blockquote>
 <title> ẤN QUANG ĐẠI SƯ </title>
 
 <div id="126435940873196017"><div><style type="text/css">
@@ -187,541 +189,1197 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <!-- Start: injected by Adguard -->
 
-<!-- Start: injected by Adguard -->
-<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731918089155&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
-<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<!DOCTYPE html>
+<html lang="en" >
 
-<!-- End: injected by Adguard -->
-<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63731689034557&amp;domain=kinhlangnghiem.github.io&amp;mask=111" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
-<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63731689031968&name=Adguard%20Assistant&name=Popup%20Blocker%20by%20AdGuard" nonce="88c0c0324e6040f0a388ff7ebee4d989" type="text/javascript"></script>
+<head>
 
-<!-- End: injected by Adguard -->
-<link rel="stylesheet" href="https://kinhlangnghiem.github.io/nammoadidaphat/reset.min.css">
-<link rel='stylesheet' href='https://kinhlangnghiem.github.io/nammoadidaphat/plyr.css'>
+
+
+  
+    <script src="https://kinhlangnghiem.github.io/DangVanQuy/Music-Player1.js"></script>
+
+
+  <title> Ấn Quang Đại Sư </title>
+
+    <link rel="canonical" href="https://codepen.io/serversideup/pen/WWQwRw">
+  
+  
+  
+  
 <style>
-/* Font Family
-================================================== */
+/*
+  1. Base
+*/
+/*
+  2. Components
+*/
+div#list-screen {
+  background-color: #141920;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none; }
+  div#list-screen div#list-screen-header {
+    background-color: #141920;
+    padding: 15px;
+    text-align: center;
+    height: 25px;
+    position: relative;
+    color: white;
+    font-family: "Lato", sans-serif;
+    cursor: pointer; }
+    div#list-screen div#list-screen-header img#up-arrow {
+      position: absolute;
+      top: 23px;
+      left: 15px;
+      cursor: pointer; }
+    div#list-screen div#list-screen-header span.list-active-song-name {
+      color: #fff;
+      line-height: 25px;
+      font-size: 16px;
+      font-family: "Lato", sans-serif;
+      letter-spacing: 0.5px; }
+  div#list-screen div#list {
+    overflow-y: scroll; }
+    div#list-screen div#list div.song {
+      padding: 15px;
+      background-color: #242b33;
+      margin-bottom: 1px;
+      cursor: pointer;
+      line-height: 24px; }
+      div#list-screen div#list div.song span.song-number-now-playing {
+        display: inline-block;
+        width: 24px;
+        text-align: center; }
+        div#list-screen div#list div.song span.song-number-now-playing span.number {
+          opacity: 0.5;
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          color: #fff;
+          letter-spacing: 0.5px; }
+        div#list-screen div#list div.song span.song-number-now-playing img.now-playing {
+          display: none; }
+      div#list-screen div#list div.song.amplitude-active-song-container {
+        background-color: #30363e; }
+        div#list-screen div#list div.song.amplitude-active-song-container span.song-number-now-playing img.now-playing {
+          display: inline-block; }
+        div#list-screen div#list div.song.amplitude-active-song-container span.song-number-now-playing span.number {
+          display: none; }
+      div#list-screen div#list div.song div.song-meta-container {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+        width: calc(100% - 80px); }
+        div#list-screen div#list div.song div.song-meta-container span.song-name {
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          line-height: 16px;
+          color: #55b560;
+          letter-spacing: 0.47px;
+          display: block; }
+        div#list-screen div#list div.song div.song-meta-container span.song-artist-album {
+          font-family: "Lato", sans-serif;
+          font-size: 12px;
+          line-height: 14px;
+          color: #fff;
+          letter-spacing: 0.47px;
+          display: block; }
+      div#list-screen div#list div.song span.song-duration {
+        display: inline-block;
+        opacity: 0.5;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        width: 35px;
+        text-align: center; }
+      div#list-screen div#list div.song span.song-artist-album {
+        color: #5277b0; }
+  div#list-screen div#list-screen-footer {
+    height: 80px;
+    padding: 15px; }
+    div#list-screen div#list-screen-footer div#list-screen-meta-container {
+      width: calc(100% - 123px);
+      float: left; }
+      div#list-screen div#list-screen-footer div#list-screen-meta-container span.song-name {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        line-height: 24px; }
+      div#list-screen div#list-screen-footer div#list-screen-meta-container div.song-artist-album {
+        opacity: 0.5;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        line-height: 16px; }
+    div#list-screen div#list-screen-footer div.list-controls {
+      width: 90px;
+      float: right;
+      margin-top: 8px; }
+      div#list-screen div#list-screen-footer div.list-controls div.list-previous {
+        cursor: pointer;
+        width: 15px;
+        height: 17px;
+        background-image: url("https://kinhlangnghiem.github.io/DangVanQuy/small-previous.svg");
+        background-repeat: no-repeat;
+        float: left;
+        margin-right: 15px;
+        margin-top: 4px; }
+      div#list-screen div#list-screen-footer div.list-controls div.list-play-pause {
+        cursor: pointer;
+        width: 17px;
+        height: 24px;
+        background-repeat: no-repeat;
+        float: left; }
+        div#list-screen div#list-screen-footer div.list-controls div.list-play-pause.amplitude-playing {
+          background-image: url("https://kinhlangnghiem.github.io/DangVanQuy/small-pause.svg"); }
+        div#list-screen div#list-screen-footer div.list-controls div.list-play-pause.amplitude-paused {
+          background-image: url("https://kinhlangnghiem.github.io/DangVanQuy/small-play.svg"); }
+      div#list-screen div#list-screen-footer div.list-controls div.list-next {
+        cursor: pointer;
+        width: 15px;
+        height: 17px;
+        background-image: url("https://kinhlangnghiem.github.io/DangVanQuy/small-next.svg");
+        background-repeat: no-repeat;
+        float: left;
+        margin-left: 15px;
+        margin-top: 4px; }
 
-@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+div.player-header {
+  background-color: #141920;
+  padding: 15px;
+  text-align: center;
+  height: 25px;
+  position: relative;
+  margin-top: 40px;
+  cursor: pointer;
+  color: white;
+  font-family: "Lato", sans-serif; }
+  div.player-header img#down {
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    cursor: pointer; }
 
+div#player-top {
+  position: relative; }
+  div#player-top img[data-amplitude-song-info="cover_art_url"] {
+    width: 100%;
+    height: 370px; }
 
-/* Global Styles
-================================================== */
+div#player-progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: relative;
+  margin-top: -6px; }
+  div#player-progress-bar-container progress#song-played-progress {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    border: none;
+    cursor: pointer;
+    background: transparent; }
+  div#player-progress-bar-container progress#song-played-progress[value]::-webkit-progress-bar {
+    background: none; }
+  div#player-progress-bar-container progress#song-played-progress[value]::-webkit-progress-value {
+    background: white; }
+  div#player-progress-bar-container progress#song-played-progress[value]::-moz-progress-bar {
+    background: white; }
+  div#player-progress-bar-container progress#song-buffered-progress {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border: none;
+    background: transparent; }
+  div#player-progress-bar-container progress#song-buffered-progress[value]::-webkit-progress-bar {
+    background: none; }
+  div#player-progress-bar-container progress#song-buffered-progress[value]::-webkit-progress-value {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: width 0.1s ease; }
+  div#player-progress-bar-container progress#song-buffered-progress[value]::-moz-progress-bar {
+    background: rgba(255, 255, 255, 0.5); }
 
-html,body {
--webkit-font-smoothing:antialiased;
--webkit-text-size-adjust:100%;
-background-color:#0665a2;
-color:#fff;
-font-size:1rem;
-font-family:"Oxygen", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight:400;
-letter-spacing:.025rem;
-line-height:1.618;
-padding:1rem 0;
-}
+div#player-middle {
+  background-color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative; }
+  div#player-middle div#time-container {
+    color: white;
+    width: 100%;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: bold; }
+    div#player-middle div#time-container span.amplitude-duration-time {
+      position: absolute;
+      top: 0px;
+      right: 5px; }
+    div#player-middle div#time-container span.amplitude-current-time {
+      position: absolute;
+      top: 0px;
+      left: 5px; }
+  div#player-middle span.song-name {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    display: block; }
+  div#player-middle div.song-artist-album {
+    opacity: 0.5;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    line-height: 16px; }
 
-*,::before,::after {
-box-sizing:border-box;
-}
+div#player-bottom {
+  background-color: #192029;
+  padding-left: 25px;
+  padding-right: 25px; }
+  div#player-bottom div#control-container {
+    height: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  div#player-bottom div#control-container div#shuffle-container {
+    float: left;
+    width: 20%;
+    height: 60px;
+    padding-top: 21px; }
+    div#player-bottom div#control-container div#shuffle-container div#shuffle {
+      width: 16px;
+      height: 17px;
+      cursor: pointer;
+      margin: auto;
+      opacity: 0.7; }
+      div#player-bottom div#control-container div#shuffle-container div#shuffle.amplitude-shuffle-off {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/shuffle.svg"); }
+      div#player-bottom div#control-container div#shuffle-container div#shuffle.amplitude-shuffle-off:hover {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/shuffle-on.svg");
+        opacity: 0.8; }
+      div#player-bottom div#control-container div#shuffle-container div#shuffle.amplitude-shuffle-on {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/shuffle-on.svg");
+        opacity: 1; }
+      div#player-bottom div#control-container div#shuffle-container div#shuffle.amplitude-shuffle-on:hover {
+        opacity: 1; }
+  div#player-bottom div#control-container div#prev-container {
+    width: 20%;
+    float: left;
+    height: 60px;
+    padding-top: 18px; }
+    div#player-bottom div#control-container div#prev-container div#previous {
+      background: url("https://kinhlangnghiem.github.io/DangVanQuy/previous.svg");
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      margin: auto; }
+      div#player-bottom div#control-container div#prev-container div#previous:hover {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/previous-hover.svg"); }
+  div#player-bottom div#control-container div#play-pause-container {
+    width: 20%;
+    float: left;
+    height: 60px; }
+    div#player-bottom div#control-container div#play-pause-container div#play-pause {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      margin: auto; }
+      div#player-bottom div#control-container div#play-pause-container div#play-pause.amplitude-playing {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/pause.svg"); }
+      div#player-bottom div#control-container div#play-pause-container div#play-pause.amplitude-paused {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/play.svg"); }
+  div#player-bottom div#control-container div#next-container {
+    width: 20%;
+    float: left;
+    height: 60px;
+    padding-top: 18px; }
+    div#player-bottom div#control-container div#next-container div#next {
+      background: url("https://kinhlangnghiem.github.io/DangVanQuy/next.svg");
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      margin: auto; }
+      div#player-bottom div#control-container div#next-container div#next:hover {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/next-hover.svg"); }
+  div#player-bottom div#control-container div#repeat-container {
+    float: left;
+    width: 20%;
+    height: 60px;
+    padding-top: 20px; }
+    div#player-bottom div#control-container div#repeat-container div#repeat {
+      background: url("https://kinhlangnghiem.github.io/DangVanQuy/repeat.svg");
+      width: 18px;
+      height: 20px;
+      cursor: pointer;
+      margin: auto;
+      opacity: 0.7; }
+      div#player-bottom div#control-container div#repeat-container div#repeat:hover {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/repeat-on.svg");
+        opacity: 0.8; }
+      div#player-bottom div#control-container div#repeat-container div#repeat.amplitude-repeat-on {
+        background: url("https://kinhlangnghiem.github.io/DangVanQuy/repeat-on.svg");
+        opacity: 1; }
+        div#player-bottom div#control-container div#repeat-container div#repeat.amplitude-repeat-on:hover {
+          opacity: 1; }
+  div#player-bottom div#control-container::after {
+    content: "";
+    display: table;
+    clear: both; }
+  div#player-bottom div#volume-container {
+    padding-bottom: 20px;
+    text-align: center; }
+    div#player-bottom div#volume-container img {
+      display: block;
+      float: left;
+      margin-top: -9px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider {
+      width: calc(100% - 30px);
+      -webkit-appearance: none;
+      display: block;
+      margin-left: 10px;
+      float: left; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider:focus {
+      outline: none; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-webkit-slider-runnable-track {
+      width: 75%;
+      height: 2px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #cfd8dc; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-webkit-slider-thumb {
+      height: 18px;
+      width: 18px;
+      background-color: white;
+      cursor: pointer;
+      margin-top: -8px;
+      -webkit-appearance: none;
+      border-radius: 20px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider:focus::-webkit-slider-runnable-track {
+      background: #cfd8dc; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-moz-range-track {
+      width: 100%;
+      height: 1px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #cfd8dc; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-moz-range-thumb {
+      height: 18px;
+      width: 18px;
+      background-color: white;
+      cursor: pointer;
+      margin-top: -8px;
+      -webkit-appearance: none;
+      border-radius: 20px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-track {
+      width: 100%;
+      height: 2px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #cfd8dc;
+      border-width: 15px 0;
+      color: transparent;
+      border-color: #192029; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-fill-lower {
+      background: transparent;
+      border-radius: 2.6px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+      background: transparent;
+      border-radius: 2.6px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-thumb {
+      height: 18px;
+      width: 18px;
+      background-color: white;
+      cursor: pointer;
+      margin-top: 0px;
+      border: 20px; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider:focus::-ms-fill-lower {
+      background: #cfd8dc; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+      background: #cfd8dc; }
+    div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider::-ms-tooltip {
+      display: none; }
+  div#player-bottom div#volume-container:after {
+    content: "";
+    display: table;
+    clear: both; }
 
-* {
--webkit-tap-highlight-color:rgba(0,0,0,0);
--webkit-tap-highlight-color:transparent;
-}
+@-moz-document url-prefix() {
+  div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider {
+    margin-top: 0px; } }
+@supports (-ms-ime-align: auto) {
+  div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider {
+    margin-top: -4px;
+    height: 30px;
+    background-color: #192029 !important; } }
+@media all and (-ms-high-contrast: none) {
+  div#player-bottom div#volume-container *::-ms-backdrop,
+  div#flat-black-player-container div#player-bottom div#volume-container input[type="range"].amplitude-volume-slider {
+    margin-top: -8px;
+    background-color: #192029 !important;
+    background: #192029 !important; } }
+/*
+  3. Layout
+*/
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif; }
 
+div#flat-black-player-container {
+  position: relative;
+  max-width: 400px;
+  margin: auto; }
 
-/* Setup
-================================================== */
+/*
+  4. Pages
+*/
+/*
+  5. Themes
+*/
+/*
+  6. Utils
+*/
+/*
+  7. Vendors
+*/
+/*
+  8. Animations
+*/
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-.container { position:relative; margin:0 auto; max-width:800px; width:100%; }
-.column { width:inherit; }
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-25 18:39:54
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+.slide-out-top {
+  -webkit-animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-25 18:45:17
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0; } }
+@keyframes slide-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0; } }
 
-/* Typography / Links
-================================================== */
+/*# sourceMappingURL=app.css.map */
 
-p { color:#fff; display:block; font-size:.9rem; font-weight:400; margin:0 0 2px; }
-
-a,a:visited { color:#8cc3e6; outline:0; text-decoration:underline; }
-a:hover,a:focus { color:#bbdef5; }
-p a,p a:visited { line-height:inherit; }
-
-
-/* Misc.
-================================================== */
-
-.add-bottom { margin-bottom:2rem !important; }
-.left { float:left; }
-.right { float:right; }
-.center { text-align:center; }
-.hidden { display:none; }
-
-.no-support {
-margin:2rem auto;
-text-align:center;
-width:90%;
-}
-
-
-/* Audio Player Styles
-================================================== */
-
-audio {
-display:none;
-}
-
-#audiowrap,
-#plwrap {
-margin:0 auto;
-}
-
-#tracks {
-font-size:0;
-position:relative;
-text-align:center;
-}
-
-#nowPlay {
-display:block;
-font-size:0;
-}
-
-#nowPlay span {
-display:inline-block;
-font-size:1.05rem;
-vertical-align:top;
-}
-
-#nowPlay span#npAction {
-padding:21px;
-width:30%;
-}
-
-#nowPlay span#npTitle {
-padding:21px;
-text-align:right;
-width:70%;
-}
-
-#plList li {
-cursor:pointer;
-display:block;
-margin:0;
-padding:21px 0;
-}
-
-#plList li:hover {
-background-color:rgba(0,0,0,.1);
-}
-
-.plItem {
-position:relative;
-}
-
-.plTitle {
-left:50px;
-overflow:hidden;
-position:absolute;
-right:65px;
-text-overflow:ellipsis;
-top:0;
-white-space:nowrap;
-}
-
-.plNum {
-padding-left:21px;
-width:25px;
-}
-
-.plLength {
-padding-left:21px;
-position:absolute;
-right:21px;
-top:0;
-}
-
-.plSel,
-.plSel:hover {
-background-color:rgba(0,0,0,.1);
-color:#fff;
-cursor:default !important;
-}
-
-#tracks a {
-border-radius:3px;
-color:#fff;
-cursor:pointer;
-display:inline-block;
-font-size:2.3rem;
-height:35px;
-line-height:.175;
-margin:0 5px 30px;
-padding:10px 15px;
-text-decoration:none;
-transition:background .3s ease;
-}
-
-#tracks a:last-child {
-margin-left:0;
-}
-
-#tracks a:hover,
-#tracks a:active {
-background-color:rgba(0,0,0,.1);
-color:#fff;
-}
-
-#tracks a::-moz-focus-inner {
-border:0;
-padding:0;
-}
-
-
-/* Plyr Overrides
-================================================== */
-
-.plyr--audio .plyr__controls {
-background-color:transparent;
-border:none;
-color:#fff;
-padding:20px 20px 20px 13px;
-width:100%;
-}
-
-a.plyr__controls__item.plyr__control:hover,
-.plyr--audio .plyr__controls button:hover,
-.plyr--audio .plyr__controls button.tab-focus:focus,
-.plyr__play-large {
-background-color:rgba(0,0,0,.1);
-}
-
-.plyr__progress--played,
-.plyr__volume--display {
-color:rgba(0,0,0,.1);
-}
-
-.plyr--audio .plyr__progress--buffer,
-.plyr--audio .plyr__volume--display {
-background:rgba(0,0,0,.1);
-}
-
-.plyr--audio .plyr__progress--buffer {
-color:rgba(0,0,0,.1);
-}
-
-
-/* Media Queries
-================================================== */
-
-@media only screen and (max-width:600px) {
-    #nowPlay span#npAction { display:none; }
-    #nowPlay span#npTitle { display:block; text-align:center; width:100%; }
+a.learn-more{
+  background-color: #141920;
+  display: block;
+  width: 300px;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px;
 }
 </style>
-<script>
+
+  <script>
   window.console = window.console || function(t) {};
 </script>
-<script src="https://kinhlangnghiem.github.io/nammoadidaphat/prefixfree.min.js"></script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
+
+  
+  
 </head>
+
 <body translate="no">
-<div class="container">
-<div class="column add-bottom">
-<div id="mainwrap">
-<div id="nowPlay">
-<span id="npAction">Paused...</span><span id="npTitle"></span>
-</div>
-<div id="audiowrap">
-<div id="audio0">
-<audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
-</div>
-<div id="tracks">
-<a id="btnPrev">&vltri;</a><a id="btnNext">&vrtri;</a>
-</div>
-</div>
-<div id="plwrap">
-<ul id="plList"></ul>
-</div>
-</div>
-</div>
-<div class="column add-bottom center">
-</div>
-</div>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-<script src='https://kinhlangnghiem.github.io/nammoadidaphat/jquery.min.js'></script>
-<script src='https://kinhlangnghiem.github.io/nammoadidaphat/html5media.min.js'></script>
-<script src='https://kinhlangnghiem.github.io/nammoadidaphat/plyr.min.js'></script>
-<script id="rendered-js">
-// Mythium Archive: https://archive.org/details/mythium/
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>AmplitudeJS Testing</title>
 
-jQuery(function ($) {
-  'use strict';
-  var supportsAudio = !!document.createElement('audio').canPlayType;
-  if (supportsAudio) {
-    // initialize plyr
-    var player = new Plyr('#audio1', {
-      controls: [
-      'restart',
-      'play',
-      'progress',
-      'current-time',
-      'duration',
-      'mute',
-      'volume',
-      'download'] });
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+  </head>
+  <body>
+    <div id="flat-black-player-container">
+      <div id="list-screen" class="slide-in-top">
+        <div id="list-screen-header" class="hide-playlist">
+          <img id="up-arrow" src="https://kinhlangnghiem.github.io/DangVanQuy/up.svg"/>
+          ẨN DANH SÁCH PHÁT
+        </div>
 
+        <div id="list">
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+            <span class="song-number-now-playing">
+              <span class="number">1</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
 
-    // initialize playlist and controls
-    var index = 0,
-    playing = false,
-    mediaPath = '',
-    extension = '',
-    tracks = [{
-      "track": 1,
-      "name": " Thích Thiền Tâm - LÁ THƠ TỊNH ĐỘ",
-      "duration": "04:27:40",
-      "file": "https://archive.org/download/LA_THO_TINH_DO/Th%C3%ADch%20Thi%E1%BB%81n%20T%C3%A2m%20-%20L%C3%A1%20Th%C6%A1%20T%E1%BB%8Bnh%20%C4%90%E1%BB%99.mp3" },
-{
-      "track": 2,
-      "name": "Khai Thị Về Giới Sát Sanh ",
-      "duration": "2:19:42",
-      "file": "https://dl.dropboxusercontent.com/s/q6ikogwv2h4xvqm/Khai-Thi-Ve-Gioi-Sat-An-Quang-Dai-Su.mp3" },
-{
-      "track": 3,
-      "name": " ẤN QUANG VĂN SAO ",
-      "duration": "06:49:18",
-      "file": "https://dl.dropboxusercontent.com/s/8kkf7bu7n7a56hk/An-Quang-VanSao.mp3" },
-{
-      "track": 4,
-      "name": " Ấn Quang Đại Sư Gia Ngôn Luật 01 ",
-      "duration": "2:58:32",
-      "file": "https://archive.org/download/anquangdaisugiangonlucphan1/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%201.mp3" },
-{
-      "track": 5,
-      "name": " Ấn Quang Đại Sư Gia Ngôn Luật 02 ",
-      "duration": "5:14:01",
-      "file": "https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3" },
-{
-      "track": 6,
-      "name": "Diễn Đọc Sách Thọ Khang Bảo Giám  ",
-      "duration": "8:31:09",
-      "file": "https://archive.org/download/ho_Khang_Bao_Giam/Th%E1%BB%8D%20Khang%20B%E1%BA%A3o%20Gi%C3%A1m.mp3" },
-{
-      "track": 7,
-      "name": " ẤN QUANG VĂN SAO LỜI KHAI THỊ VÀNG ",
-      "duration": "4:32:27",
-      "file": "https://archive.org/download/anquanggiangonlucloivang/%E1%BA%A4n%20Quang%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20L%E1%BB%9Di%20V%C3%A0ng%20%28%C4%90%E1%BB%A7%20c%C3%A1c%20ph%E1%BA%A7n%201%2C%202%2C%203%20v%C3%A0%204%29.mp3" },
-{
-      "track": 8,
-      "name": " ẤN QUANG ĐẠI SƯ HỘ QUỐC TIÊU TAI ",
-      "duration": "5:14:01",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/aqnalaojkqbk8k9722nfl/N-QUANG-I-S-H-QU-C-TI-U-TAI.mp3?rlkey=6q7lf9yg50ty7txdof4a6k459&st=mtuie1mn&dl=1" },
-{
-      "track": 9,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 01 ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/4mansmjhyoreuj24v9epx/n-Quang-Ph-p-S-V-n-Sao-T-p-01.mp3?rlkey=sp41zi3m7pvia9v0hf0tlj0az&st=kv32mxp8&dl=1" },
-{
-      "track": 10,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 02 ",
-      "duration": "8:31:09",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/jd5jzm9izwnoy7dy0lk18/n-Quang-Ph-p-S-V-n-Sao-T-p-02.mp3?rlkey=1e8tr7f1lkaj4yr7d02a3rmx4&st=6gxkclxv&dl=1" },
-{
-      "track": 11,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 03 ",
-      "duration": "4:32:27",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/kx88385nfyli5nopnvw7h/n-Quang-Ph-p-S-V-n-Sao-T-p-03.mp3?rlkey=07w958chc2l4e8601v8i6jvq0&st=rdaj7nid&dl=1" },
-{
-      "track": 12,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 04 ",
-      "duration": "4:32:27",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/3ehwlikqdeopf3fu2do5c/n-Quang-Ph-p-S-V-n-Sao-T-p-04.mp3?rlkey=ghnofeb6phwh9gvv1kqtluhfa&st=91cufmyr&dl=1" },
-{
-      "track": 13,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 05 ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/0exc8j8cf18jaru3yziru/n-Quang-Ph-p-S-V-n-Sao-T-p-05.mp3?rlkey=0f92gtrya7s50lnc7o7j74fzp&st=juzi7d39&dl=1" },
-{
-      "track": 14,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 06 ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/67j7sz14neh1bge2zio37/n-Quang-Ph-p-S-V-n-Sao-T-p-06.mp3?rlkey=23djb7svc00jfo0ou1uwavk1l&st=gfxws23z&dl=1" },
-{
-      "track": 15,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 07 ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/jy79x80znsgaxxbouv2g4/n-Quang-Ph-p-S-V-n-Sao-T-p-07.mp3?rlkey=07nuq2sklsp8p5w4e9bvt3ykq&st=pvz83gaq&dl=1" },
-{
-      "track": 16,
-      "name": " Ấn Quang Pháp Sư Văn Sao Tập 08 ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/scl/fi/g1td9j50yzq6e0fqn23yb/n-Quang-Ph-p-S-V-n-Sao-T-p-08.mp3?rlkey=ot9gde32aoblwruqiv5crphr8&st=7u2pzf2l&dl=1" },              
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="0"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="0"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="0"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:30
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+            <span class="song-number-now-playing">
+              <span class="number">2</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="1"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="1"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="1"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:16
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+            <span class="song-number-now-playing">
+              <span class="number">3</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="2"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="2"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="2"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:32
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+            <span class="song-number-now-playing">
+              <span class="number">4</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="3"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="3"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="3"></span></span>
+            </div>
+
+            <span class="song-duration">
+              3:30
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+            <span class="song-number-now-playing">
+              <span class="number">5</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="4"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="4"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="4"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:12
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5">
+            <span class="song-number-now-playing">
+              <span class="number">6</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="5"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="5"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="5"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:29
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="6">
+            <span class="song-number-now-playing">
+              <span class="number">7</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="6"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="6"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="6"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:29
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="7">
+            <span class="song-number-now-playing">
+              <span class="number">8</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="7"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="7"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="7"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:39
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="8">
+            <span class="song-number-now-playing">
+              <span class="number">9</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="8"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="8"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="8"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:00
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="9">
+            <span class="song-number-now-playing">
+              <span class="number">10</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="9"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="9"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="9"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:25
+            <span>
+          </div>
               
-{	
-      "track": 17,
-      "name": " ĐẠI SƯ ẤN QUANG - KHAI THỊ NIỆM PHẬT ",
-      "duration": "8:31:09",
-      "file": "https://www.googleapis.com/drive/v3/files/1-OYoGmwK61slrxnmnYVPPbwIJh2dJiG4?alt=media&key=AIzaSyDJISHZXHEWz1hz1fo0p8FY_MkIq5pcaoA" },
-{
-      "track": 18,
-      "name": " LÁ THƠ TỊNH ĐỘ 1 ",
-      "duration": "4:32:27",
-      "file": "https://www.googleapis.com/drive/v3/files/1bbDZzQeqUuRXn-YwRG8fGHmCDCiSy5kN?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
-{
-      "track": 19,
-      "name": " LÁ THƠ TỊNH ĐỘ 2 ",
-      "duration": "4:32:27",
-      "file": "https://www.dropbox.com/scl/fi/1q8md0utt9gnovp0f1dom/L-Th-T-nh-02.mp3?rlkey=7w1xwi2cp89to806n0036uj2l&st=onfapr3m&dl=1" },
-{
-      "track": 20,
-      "name": " KHAI THỊ VỀ GIỚI DÂM ",
-      "duration": "4:55:25",
-      "file": "https://www.googleapis.com/drive/v3/files/1jhtW9V7g9XGySAiI5hEAHy6P8GZDklbu?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY" },
-{
-      "track": 21,
-      "name": " ĐẠI SƯ ẤN QUANG - KHAI THỊ NIỆM PHẬT ",
-      "duration": "8:31:09",
-      "file": "https://dl.dropboxusercontent.com/s/jy33015cr2urokq/Khuyen-Nguoi-Bo-Su-Giet-Hai.mp3" },
-{
-      "track": 22,
-      "name": " Ấn Quang ĐẠI Sư Hộ Quốc Tiêu - Đọc Giọng Nữ ",
-      "duration": "4:32:27",
-      "file": "https://archive.org/download/AnQuangVanSAo/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A0I%20S%C6%B0%20H%E1%BB%99%20Qu%E1%BB%91c%20Ti%C3%AAu%20%C4%90%E1%BB%8Dc%20Gi%E1%BB%8Dng%20N%E1%BB%AF.mp3" },
-{
-      "track": 23,
-      "name": " Khuyên Người Bỏ Sự Giết Hại ",
-      "duration": "4:32:27",
-      "file": "https://dl.dropboxusercontent.com/s/q6ikogwv2h4xvqm/Khai-Thi-Ve-Gioi-Sat-An-Quang-Dai-Su.mp3" },
-{
+ <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+            <span class="song-number-now-playing">
+              <span class="number">11</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
 
-       "track": 24,
-      "name": " Khuyên Ngườ Bỏ Sự Tham Dục ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/s/tknpvlhfzla2o63/Khuyen-Nguoi-Bo-Su-Tham-Duc.mp3" },
-{
-	
-      "track": 25,
-      "name": " Khuyên Ngườ Tin Sâu Nhân Quả ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/s/azxgnhj3cwckt4a/Khuyen-Nguoi-Tin-Sau-Nhan-Qua.mp3" },
-{
-      "track": 26,
-      "name": " Khuyên Niệm Phật Cầu Sanh Tịnh Độ ",
-      "duration": "4:55:25",
-      "file": "https://dl.dropboxusercontent.com/s/vtr37brr00cbnxi/Khuyen-Nguoi-Niem-Phat-%20Cau-Sanh-Tinh-Do.mp3" },
-{
-      "track": 27,
-      "name": " SÁCH THỌ KHANG BẢO GIÁM",
-      "duration": "4:55:25",
-      "file": "https://archive.org/download/ho_Khang_Bao_Giam/Th%E1%BB%8D%20Khang%20B%E1%BA%A3o%20Gi%C3%A1m.mp3" },
-{
-      "track": 28,
-      "name": " LÁ THƯ TỊNH ĐỘ FULL ",
-      "duration": "4:55:25",
-      "file": "https://archive.org/download/LATHUTINHDO_ANQUANGDAISU/L%C3%A1%20Th%C6%B0%20T%E1%BB%8Bnh%20%C4%90%E1%BB%99%201%20%26%202.mp3" }],
-             
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="10"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="0"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="10"></span></span>
+            </div>
 
-    buildPlaylist = $.each(tracks, function (key, value) {
-      var trackNumber = value.track,
-      trackName = value.name,
-      trackDuration = value.duration;
-      if (trackNumber.toString().length === 1) {
-        trackNumber = '0' + trackNumber;
-      }
-      $('#plList').append('<li> \
-                    <div class="plItem"> \
-                        <span class="plNum">' + trackNumber + '.</span> \
-                        <span class="plTitle">' + trackName + '</span> \
-                        <span class="plLength">' + trackDuration + '</span> \
-                    </div> \
-                </li>');
-    }),
-    trackCount = tracks.length,
-    npAction = $('#npAction'),
-    npTitle = $('#npTitle'),
-    audio = $('#audio1').on('play', function () {
-      playing = true;
-      npAction.text('Đang Chạy ...');
-    }).on('pause', function () {
-      playing = false;
-      npAction.text('Paused...');
-    }).on('ended', function () {
-      npAction.text('Paused...');
-      if (index + 1 < trackCount) {
-        index++;
-        loadTrack(index);
-        audio.play();
-      } else {
-        audio.pause();
-        index = 0;
-        loadTrack(index);
-      }
-    }).get(0),
-    btnPrev = $('#btnPrev').on('click', function () {
-      if (index - 1 > -1) {
-        index--;
-        loadTrack(index);
-        if (playing) {
-          audio.play();
-        }
-      } else {
-        audio.pause();
-        index = 0;
-        loadTrack(index);
-      }
-    }),
-    btnNext = $('#btnNext').on('click', function () {
-      if (index + 1 < trackCount) {
-        index++;
-        loadTrack(index);
-        if (playing) {
-          audio.play();
-        }
-      } else {
-        audio.pause();
-        index = 0;
-        loadTrack(index);
-      }
-    }),
-    li = $('#plList li').on('click', function () {
-      var id = parseInt($(this).index());
-      if (id !== index) {
-        playTrack(id);
-      }
-    }),
-    loadTrack = function (id) {
-      $('.plSel').removeClass('plSel');
-      $('#plList li:eq(' + id + ')').addClass('plSel');
-      npTitle.text(tracks[id].name);
-      index = id;
-      audio.src = mediaPath + tracks[id].file + extension;
-      updateDownload(id, audio.src);
-    },
-    updateDownload = function (id, source) {
-      player.on('loadedmetadata', function () {
-        $('a[data-plyr="download"]').attr('href', source);
-      });
-    },
-    playTrack = function (id) {
-      loadTrack(id);
-      audio.play();
-    };
-    extension = audio.canPlayType('audio/mpeg') ? '' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
-    loadTrack(index);
-  } else {
-    // no audio support
-    $('.column').addClass('hidden');
-    var noSupport = $('#audio1').text();
-    $('.container').append('<p class="no-support">' + noSupport + '</p>');
-  }
+            <span class="song-duration">
+              5:30
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="11">
+            <span class="song-number-now-playing">
+              <span class="number">12</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="11"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="1"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="11"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:16
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="12">
+            <span class="song-number-now-playing">
+              <span class="number">13</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="12"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="12"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="12"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:32
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="13">
+            <span class="song-number-now-playing">
+              <span class="number">14</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="13"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="13"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="13"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:30
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="14">
+            <span class="song-number-now-playing">
+              <span class="number">15</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="14"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="14"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="14"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:12
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="15">
+            <span class="song-number-now-playing">
+              <span class="number">16</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="15"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="15"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="15"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:29
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="16">
+            <span class="song-number-now-playing">
+              <span class="number">17</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="16"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="16"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="16"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:29
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="17">
+            <span class="song-number-now-playing">
+              <span class="number">18</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="17"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="17"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="17"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:39
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="18">
+            <span class="song-number-now-playing">
+              <span class="number">19</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="18"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="18"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="18"></span></span>
+            </div>
+
+            <span class="song-duration">
+              4:00
+            <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="19">
+            <span class="song-number-now-playing">
+              <span class="number">20</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="19"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="19"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="19"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:25
+            <span>
+          </div>
+              
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="21">
+            <span class="song-number-now-playing">
+              <span class="number">21</span>
+              <img class="now-playing" src="https://kinhlangnghiem.github.io/DangVanQuy/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="21"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="21"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="21"></span></span>
+            </div>
+
+            <span class="song-duration">
+              5:40
+            <span>
+          </div>
+        </div>
+
+        <div id="list-screen-footer">
+          <div id="list-screen-meta-container">
+            <span data-amplitude-song-info="name" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span data-amplitude-song-info="artist"></span>
+            </div>
+          </div>
+          <div class="list-controls">
+            <div class="list-previous amplitude-prev"></div>
+            <div class="list-play-pause amplitude-play-pause"></div>
+            <div class="list-next amplitude-next"></div>
+          </div>
+        </div>
+      </div>
+      <div id="player-screen">
+        <div class="player-header down-header">
+          <img id="down" src="https://kinhlangnghiem.github.io/DangVanQuy/down.svg"/>
+          HIỂN THỊ DANH SÁNH PHÁT
+        </div>
+        <div id="player-top">
+          <img data-amplitude-song-info="cover_art_url"/>
+        </div>
+        <div id="player-progress-bar-container">
+          <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+          <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+        </div>
+        <div id="player-middle">
+          <div id="time-container">
+            <span class="amplitude-current-time time-container"></span>
+            <span class="amplitude-duration-time time-container"></span>
+          </div>
+          <div id="meta-container">
+            <span data-amplitude-song-info="name" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span data-amplitude-song-info="artist"></span>
+            </div>
+          </div>
+        </div>
+        <div id="player-bottom">
+          <div id="control-container">
+
+            <div id="shuffle-container">
+              <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+            </div>
+
+            <div id="prev-container">
+              <div class="amplitude-prev" id="previous"></div>
+            </div>
+
+            <div id="play-pause-container">
+              <div class="amplitude-play-pause" id="play-pause"></div>
+            </div>
+
+            <div id="next-container">
+              <div class="amplitude-next" id="next"></div>
+            </div>
+
+            <div id="repeat-container">
+              <div class="amplitude-repeat" id="repeat"></div>
+            </div>
+
+          </div>
+
+          <div id="volume-container">
+            <img src="https://kinhlangnghiem.github.io/DangVanQuy/volume.svg"/><input type="range" class="amplitude-volume-slider" step=".1"/>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <a href="https://u.pcloud.link/publink/show?code=kZ1UiL5ZPy0YS6o9xgjBG5yThPMEqQ9JQQLk" class="learn-more">LINK DOWNLOAD MP3</a>
+  </body>
+<html>
+  <script src='https://kinhlangnghiem.github.io/DangVanQuy/amplitude.min.js'></script>
+    <script id="rendered-js" >
+window.onkeydown = function (e) {
+  return !(e.keyCode == 32);
+};
+
+/*
+  Handles a click on the down button to slide down the playlist.
+*/
+document.getElementsByClassName('down-header')[0].addEventListener('click', function () {
+  var list = document.getElementById('list');
+
+  list.style.height = parseInt(document.getElementById('flat-black-player-container').offsetHeight) - 135 + 'px';
+
+  document.getElementById('list-screen').classList.remove('slide-out-top');
+  document.getElementById('list-screen').classList.add('slide-in-top');
+  document.getElementById('list-screen').style.display = "block";
 });
+
+/*
+  Handles a click on the up arrow to hide the list screen.
+*/
+document.getElementsByClassName('hide-playlist')[0].addEventListener('click', function () {
+  document.getElementById('list-screen').classList.remove('slide-in-top');
+  document.getElementById('list-screen').classList.add('slide-out-top');
+  document.getElementById('list-screen').style.display = "none";
+});
+
+/*
+  Handles a click on the song played progress bar.
+*/
+document.getElementById('song-played-progress').addEventListener('click', function (e) {
+  var offset = this.getBoundingClientRect();
+  var x = e.pageX - offset.left;
+
+  Amplitude.setSongPlayedPercentage(parseFloat(x) / parseFloat(this.offsetWidth) * 100);
+});
+
+document.querySelector('img[data-amplitude-song-info="cover_art_url"]').style.height = document.querySelector('img[data-amplitude-song-info="cover_art_url"]').offsetWidth + 'px';
+
+Amplitude.init({
+  "bindings": {
+    37: 'prev',
+    39: 'next',
+    32: 'play_pause' },
+
+  "songs": [{
+    "name": "Thích Thiền Tâm - LÁ THƠ TỊNH ĐỘ",
+    "artist": "Ấn Quang Đại Sư",
+    "album": " Đại Sư Ấn Quang",
+    "url": "https://archive.org/download/LA_THO_TINH_DO/Th%C3%ADch%20Thi%E1%BB%81n%20T%C3%A2m%20-%20L%C3%A1%20Th%C6%A1%20T%E1%BB%8Bnh%20%C4%90%E1%BB%99.mp3",
+    "cover_art_url": "https://kinhlangnghiem.github.io/DangVanQuy/Hinhnen-Audio.jpg" },
+
+  {
+    "name": "Khai Thị Về Giới Sát Sanh",
+    "artist": "Ấn Quang Đại Sư",
+    "album": " Đại Sư Ấn Quang",
+    "url": "https://dl.dropboxusercontent.com/s/8kkf7bu7n7a56hk/An-Quang-VanSao.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/ask-the-dust.jpg" },
+
+  {
+    "name": "Ấn Quang Đại Sư Gia Ngôn Luật 01",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "  Đại Sư Ấn Quang ",
+    "url": "https://archive.org/download/anquangdaisugiangonlucphan1/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%201.mp3",
+    "cover_art_url": "https://kinhlangnghiem.github.io/DangVanQuy/Hinhnen-Audio.jpg" },
+
+  {
+    "name": " Ấn Quang Đại Sư Gia Ngôn Luật 02 ",
+    "artist": " Ấn Quang Đại Sư ",
+    "album": " Ấn Quang Đại Sư ",
+    "url": "https://archive.org/download/anquangdaisugiangonlucphan2/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A1i%20S%C6%B0%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20Ph%E1%BA%A7n%202.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-to-answer.jpg" },
+
+  {
+    "name": " Diễn Đọc Sách Thọ Khang Bảo Giám ",
+    "artist": " Đại Sư Ấn Quang ",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://archive.org/download/ho_Khang_Bao_Giam/Th%E1%BB%8D%20Khang%20B%E1%BA%A3o%20Gi%C3%A1m.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/soon-it-will-be-cold-enough.jpg" },
+
+  {
+    "name": " ẤN QUANG VĂN SAO LỜI KHAI THỊ VÀNG ",
+    "artist": " Đại Sư Ấn Quang ",
+    "album": " Đại Sư Ấn Quang ",
+    "url": "https://archive.org/download/anquanggiangonlucloivang/%E1%BA%A4n%20Quang%20Gia%20Ng%C3%B4n%20L%E1%BB%A5c%20-%20L%E1%BB%9Di%20V%C3%A0ng%20%28%C4%90%E1%BB%A7%20c%C3%A1c%20ph%E1%BA%A7n%201%2C%202%2C%203%20v%C3%A0%204%29.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/key.jpg" },
+
+  {
+    "name": " ẤN QUANG ĐẠI SƯ HỘ QUỐC TIÊU TAI ",
+    "artist": " Đại Sư Ấn Quang ",
+    "album": " Ấn Quang Đại Sư ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/aqnalaojkqbk8k9722nfl/N-QUANG-I-S-H-QU-C-TI-U-TAI.mp3?rlkey=6q7lf9yg50ty7txdof4a6k459&st=mtuie1mn&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/guidance.jpg" },
+
+  {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 01",
+    "artist": " Ấn Quang Đại Sư  ",
+    "album": " Ấn Quang Đại Sư  ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/4mansmjhyoreuj24v9epx/n-Quang-Ph-p-S-V-n-Sao-T-p-01.mp3?rlkey=sp41zi3m7pvia9v0hf0tlj0az&st=kv32mxp8&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/die-digital.jpg" },
+
+  {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 02 ",
+    "artist": " Đại Sư Ấn Quang ",
+    "album": " Ấn Quang Đại Sư ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/jd5jzm9izwnoy7dy0lk18/n-Quang-Ph-p-S-V-n-Sao-T-p-02.mp3?rlkey=1e8tr7f1lkaj4yr7d02a3rmx4&st=6gxkclxv&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-but-hunks-of-wood.jpg" },
+
+  {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 03 ",
+    "artist": " Đại Sư Ấn Quang ",
+    "album": " Ấn Quang Đại Sư ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/kx88385nfyli5nopnvw7h/n-Quang-Ph-p-S-V-n-Sao-T-p-03.mp3?rlkey=07w958chc2l4e8601v8i6jvq0&st=rdaj7nid&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/from-dusk-to-dawn.jpg" },
+    {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 04 ",
+    "artist": " Ấn Quang Đại Sư ",
+    "album": " Đại Sư Ấn Quang ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/3ehwlikqdeopf3fu2do5c/n-Quang-Ph-p-S-V-n-Sao-T-p-04.mp3?rlkey=ghnofeb6phwh9gvv1kqtluhfa&st=91cufmyr&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-but-hunks-of-wood.jpg" },
+
+  {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 05 ",
+    "artist": " Ấn Quang Đại Sư ",
+    "album": " Đại Sư Ấn Quang ",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/0exc8j8cf18jaru3yziru/n-Quang-Ph-p-S-V-n-Sao-T-p-05.mp3?rlkey=0f92gtrya7s50lnc7o7j74fzp&st=juzi7d39&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/from-dusk-to-dawn.jpg" }, 
+  {
+    "name": "Ấn Quang Pháp Sư Văn Sao Tập 06 ",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/67j7sz14neh1bge2zio37/n-Quang-Ph-p-S-V-n-Sao-T-p-06.mp3?rlkey=23djb7svc00jfo0ou1uwavk1l&st=gfxws23z&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-to-answer.jpg" },
+
+  {
+    "name": "Ấn Quang Pháp Sư Văn Sao Tập 07",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/jy79x80znsgaxxbouv2g4/n-Quang-Ph-p-S-V-n-Sao-T-p-07.mp3?rlkey=07nuq2sklsp8p5w4e9bvt3ykq&st=pvz83gaq&dl=1",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/ask-the-dust.jpg" },
+
+  {
+    "name": " Ấn Quang Pháp Sư Văn Sao Tập 08 ",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Ấn Quang Đại Sư",
+    "url": "https://dl.dropboxusercontent.com/scl/fi/g1td9j50yzq6e0fqn23yb/n-Quang-Ph-p-S-V-n-Sao-T-p-08.mp3?rlkey=ot9gde32aoblwruqiv5crphr8&st=7u2pzf2l&dl=1",
+    "cover_art_url": "https://kinhlangnghiem.github.io/DangVanQuy/Hinhnen-Audio.jpg" },
+
+  {
+    "name": "KHAI THỊ VỀ GIỚI DÂM",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "Ấn Quang Đại Sư",
+    "url": "https://www.googleapis.com/drive/v3/files/1jhtW9V7g9XGySAiI5hEAHy6P8GZDklbu?alt=media&key=AIzaSyAvwKl-8enWVuIQiCtbKxkUqPNOOzLfmzY",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-to-answer.jpg" },
+
+  {
+    "name": "Ấn Quang ĐẠI Sư Hộ Quốc Tiêu - Đọc Giọng Nữ",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "Ấn Quang Đại Sư",
+    "url": "https://archive.org/download/AnQuangVanSAo/%E1%BA%A4n%20Quang%20%C4%90%E1%BA%A0I%20S%C6%B0%20H%E1%BB%99%20Qu%E1%BB%91c%20Ti%C3%AAu%20%C4%90%E1%BB%8Dc%20Gi%E1%BB%8Dng%20N%E1%BB%AF.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/soon-it-will-be-cold-enough.jpg" },
+
+  {
+    "name": "Khuyên Người Bỏ Sự Giết Hại",
+    "artist": "Ấn Quang Đại Sư",
+    "album": "Ấn Quang Đại Sư",
+    "url": "https://dl.dropboxusercontent.com/s/q6ikogwv2h4xvqm/Khai-Thi-Ve-Gioi-Sat-An-Quang-Dai-Su.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/key.jpg" },
+
+  {
+    "name": "Khuyên Ngườ Bỏ Sự Tham Dục",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://dl.dropboxusercontent.com/s/tknpvlhfzla2o63/Khuyen-Nguoi-Bo-Su-Tham-Duc.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/guidance.jpg" },
+
+  {
+    "name": "Khuyên Ngườ Tin Sâu Nhân Quả",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Đại Sư Ấn Quang ",
+    "url": "https://dl.dropboxusercontent.com/s/azxgnhj3cwckt4a/Khuyen-Nguoi-Tin-Sau-Nhan-Qua.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/die-digital.jpg" },
+
+  {
+    "name": "Khuyên Niệm Phật Cầu Sanh Tịnh Độ",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://dl.dropboxusercontent.com/s/vtr37brr00cbnxi/Khuyen-Nguoi-Niem-Phat-%20Cau-Sanh-Tinh-Do.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/we-are-but-hunks-of-wood.jpg" },
+
+  {
+    "name": "LÁ THƯ TỊNH ĐỘ FULL",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://archive.org/download/LATHUTINHDO_ANQUANGDAISU/L%C3%A1%20Th%C6%B0%20T%E1%BB%8Bnh%20%C4%90%E1%BB%99%201%20%26%202.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/from-dusk-to-dawn.jpg" },
+
+  {
+    "name": "SÁCH THỌ KHANG BẢO GIÁM",
+    "artist": "Đại Sư Ấn Quang",
+    "album": "Đại Sư Ấn Quang",
+    "url": "https://archive.org/download/ho_Khang_Bao_Giam/Th%E1%BB%8D%20Khang%20B%E1%BA%A3o%20Gi%C3%A1m.mp3",
+    "cover_art_url": "https://amplitude-cdn.serversideup.net/img/album-art/soon-it-will-be-cold-enough.jpg" }] });
 //# sourceURL=pen.js
-    </script>
+  </script>
+
+  
 </body>
 
 <div class="separator" style="clear: both;"><a href="https://www.mediafire.com/folder/3tkw0h0l8ul0q/AN_QUANG_DAI_SU_TOAN_TAP" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="43" data-original-width="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMO_4tqP9jiDlVNKWxhxydi1an8xDgMf9Qar2lNvXErRFzd_ni8NYuosDwjoOnVGJf5QJ4rWMasSRUSNPT3Sc9YX9sb-1GD9kjhsC5oHZQv0T97YOlpYSPSqZWrKsA1FPrPa-OxtlvwKlH99bWKA2MXJU1cin2gxeJ3TfZxmvmyNPpw9UoYq2aB5R0SmA/s320/giphy.gif" width="320"/></a></div>
@@ -736,6 +1394,14 @@ jQuery(function ($) {
 <div style="text-align: center;"><a href="https://BOTHIPHAP.BLOGSPOT.COM/" target="_blank"><span style="font-family: courier;"><b><span style="color: #073763; font-size: x-large;">bothiphap</span><span style="color: #660000; font-size: x-large;">.</span><span style="color: #990000; font-size: x-large;">blogspot.com</span></b></span></a></div><div><div style="text-align: center;"><span style="font-family: helvetica; font-size: x-large;"><br /></span></div><div style="text-align: center;"><span style="font-family: helvetica; font-size: x-large;"><br /></span></div>
 
 <div style="text-align: center"><p>&nbsp;<span style="background-color: #BLUE;color: #Blue;font-size: 14px;text-align: center">&nbsp;</span><a class="btn btn-common btn-effect itemHome32" href="https://kinhlangnghiem.github.io/kinhlangnghiem/NamMoADiDaPhat" style="background: rgb(246, 6, 58);border-radius: 30px;border: none;color: white;cursor: pointer;display: inline-block;font-family: Poppins, sans-serif;font-size: 30px;font-weight: 600;letter-spacing: 1px;line-height: 1.5;margin: 20px 20px 0px 0px;overflow: hidden;padding: 10px 30px;position: relative;text-transform: uppercase;vertical-align: middle;z-index: 1"><span class="fas fa-download" style="background: transparent;border: 0px;display: inline-block;line-height: 1;margin: 0px;padding: 0px;vertical-align: baseline"></span> NGHE PHÁP MP3 TRỰC TUYẾN ONLINE </a></p></div><br><br></div>
+
+
+
+
+
+</html>
+
+
 
 
 
