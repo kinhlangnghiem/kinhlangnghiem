@@ -1,6 +1,8 @@
 
 
 
+
+
   <blockquote style="text-align: center;"><strong><font size="5"><span><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf"><font><span style="background-color: #0c343d; color: white;"> ẤQ </span><span style="background-color: #0c343d; color: #fcff01;">- GIA NGÔN LUẬT.</span><span style="background-color: #660000;"><span style="color: white;">PDF</span></span> </font><span style="background-color: #0c343d;">&nbsp;</span></a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-dai-su-gia-ngon-luat.pdf" style="background-color: #0c343d;">&nbsp;&nbsp;</a><a href="https://hoathuongtuyenhoa.wordpress.com/wp-content/uploads/2025/08/an-quang-phap-su-van-sao.pdf"><font><span style="background-color: #0c343d; color: #00ffef;"> </span><span style="background-color: #0c343d; color: white;">ẤN QUANG </span><span style="background-color: #0c343d; color: #01ffff;">VĂN SAO</span><span style="background-color: #0c343d; color: #00ffef;">.</span><span style="background-color: #660000;"><span style="color: white;">PDF </span></span></font></a></span></font></strong>    </blockquote>
 <title> ẤN QUANG ĐẠI SƯ </title>
 
@@ -56,138 +58,6 @@
   </tbody></table>
 </div>
 </div>
-<div style="clear: both;"></div><script class="element-script" type="text/javascript">function setupElement126435940873196017() {
-	var requireFunc = window.platformElementRequire || window.require;
-
-	// Relies on a global require, specific to platform elements
-	requireFunc([
-		'w-global',
-		'underscore',
-		'jquery',
-		'backbone',
-		'util/platform/elements/PlatformElement',
-		'util/platform/elements/PlatformElementSettings'
-	], function(
-		_W,
-		_,
-		$,
-		Backbone,
-		PlatformElement,
-		PlatformElementSettings
-	) {
-		var dependencies = null || [];
-		var platform_element_id = "702688850553606843-1.4.3";
-
-		if (typeof _W.loadedPlatformDependencies === 'undefined') {
-			_W.loadedPlatformDependencies = [];
-		}
-
-		if (typeof _W.platformElements === 'undefined') {
-			_W.platformElements = [];
-		}
-
-		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
-			_W.platformElements[platform_element_id] = {};
-			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
-			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
-		}
-
-		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
-			_.reduce(dependencies, function(promise, nextScript){
-				_W.loadedPlatformDependencies.push(nextScript);
-				return promise.then(function(){
-					return $.getScript(nextScript);
-				});
-			}, $().promise()).then(function(){
-				_W.platformElements[platform_element_id].deferredObject.resolve();
-			});
-		}
-
-		if (dependencies.length === 0){
-			_W.platformElements[platform_element_id].deferredObject.resolve();
-		}
-
-		_W.platformElements[platform_element_id].deferredPromise.done(function(){
-			var _ElementDefinition = /**
- * This is required for element rendering to be possible
- * @type {PlatformElement}
- */
-(function() {
-    var SimpleTable = PlatformElement.extend({
-        initialize: function() {
-            this.setSizes();
-        },
-
-        setSizes: function() {
-            var sizes = this.settings.get('tableSizes');
-            // if the # of columns isn't the size of the array of lengths, ignore it.
-            if (sizes && sizes != "default" && this.settings.get('columns') == sizes.length) {
-                var columns = this.$('tr').each(function(index, value) {
-                    var cells = $(value).find('td').each(function(index2, value2) {
-                        $(value2).css('width', sizes[index2] + '%');   
-                    });
-                });
-            }
-        }
-    });
-
-    return SimpleTable;
-})();;
-
-			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
-				var _ElementDefinition = PlatformElement.extend({});
-			}
-
-			var _Element = _ElementDefinition.extend({
-				initialize: function() {
-					// we still want to call the initialize function defined by the developer
-					// however, we don't want to call it until placeholders have been replaced
-					this.placeholderInterval = setInterval(function() {
-						// so use setInterval to check for placeholders.
-						if (this.$('.platform-element-child-placeholder').length == 0) {
-							clearInterval(this.placeholderInterval);
-							this.constructor.__super__.initialize.apply(this);
-						}
-					}.bind(this), 100);
-				}
-			});
-
-			_Element.prototype.settings = new PlatformElementSettings({"columns_each":[{"columns_index":0},{"columns_index":1},{"columns_index":2}],"rows_each":[{"rows_index":0}],"columns":3,"rows":1,"style":"top","alignment":"center","titleColor":"#F8F8F8","backgroundColor":"#FFFFFF","borderColor":"#C9CDCF","tableSizes":"default"});
-			_Element.prototype.settings.page_element_id = "126435940873196017";
-
-			_Element.prototype.element_id = "d33fe91f-b40f-4ce0-8d78-832663cd1e80";
-			_Element.prototype.user_id = "132991757";
-			_Element.prototype.site_id = "945126539968472573";
-			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-702688850553606843-1.4.3/assets/";
-			new _Element({
-				el: '#element-d33fe91f-b40f-4ce0-8d78-832663cd1e80'
-			});
-		});
-	});
-
-}
-
-if (typeof document.documentElement.appReady == 'undefined') {
-	document.documentElement.appReady = 0;
-}
-
-if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
-	setupElement126435940873196017();
-} else if (document.createEvent && document.addEventListener) {
-	document.addEventListener('appReady', setupElement126435940873196017, false);
-} else {
-	document.documentElement.attachEvent('onpropertychange', function(event){
-		if (event.propertyName == 'appReady') {
-			setupElement126435940873196017();
-		}
-	});
-}
-
-</script></div></div>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Start: injected by Adguard -->
 
 <br><br><div class="separator" style="clear: both; text-align: center;">
 <iframe allowfullscreen="" frameborder="1" height="800px" marginheight="0px" marginwidth="0px" name="myiFrame" scrolling="no" src="https://kinhlangnghiem.github.io/DangVanQuy/Play-Mp3" style="border: 0px #ffffff none;" width="450px"></iframe></div></div>
@@ -207,10 +77,6 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 <div style="text-align: center"><p>&nbsp;<span style="background-color: #BLUE;color: #Blue;font-size: 14px;text-align: center">&nbsp;</span><a class="btn btn-common btn-effect itemHome32" href="https://kinhlangnghiem.github.io/kinhlangnghiem/NamMoADiDaPhat" style="background: rgb(246, 6, 58);border-radius: 30px;border: none;color: white;cursor: pointer;display: inline-block;font-family: Poppins, sans-serif;font-size: 30px;font-weight: 600;letter-spacing: 1px;line-height: 1.5;margin: 20px 20px 0px 0px;overflow: hidden;padding: 10px 30px;position: relative;text-transform: uppercase;vertical-align: middle;z-index: 1"><span class="fas fa-download" style="background: transparent;border: 0px;display: inline-block;line-height: 1;margin: 0px;padding: 0px;vertical-align: baseline"></span> NGHE PHÁP MP3 TRỰC TUYẾN ONLINE </a></p></div><br><br></div>
 
 
-
-
-
-</html>
 
 
 
